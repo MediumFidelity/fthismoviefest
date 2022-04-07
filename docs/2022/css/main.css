@@ -404,7 +404,8 @@ html, body , .container {
 
 
 .movie {
-  padding: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .movie .container {
   display: flex;
