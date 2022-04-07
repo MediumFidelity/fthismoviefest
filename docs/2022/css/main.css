@@ -425,9 +425,13 @@ html, body , .container {
     margin-bottom: 30px;
     /*text-shadow: 0 0 20px rgba(0,0,0,.3) */
 }
-.movie img {
+.movie .art {
+  height: 660px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.movie .chart {
+}
+
 
 
 
