@@ -3,14 +3,18 @@ const motherOfAllData = JSON.parse('[{"id": 1, "name": "Mars Attacks!", "directo
 
 var chartOptions = {
   responsive: false,
+  maintainAspectRatio: false,
   scales: {
     x: {
       display: true,
       title: {
-        display: false
+        display: false,
       },
       grid: {
-        display: false
+        display: false,
+      },
+      ticks: {
+        color: 'rgba(255, 255, 255, 1)',
       },
       type: 'time',
       time: {
@@ -29,7 +33,14 @@ var chartOptions = {
       title: {
         display: false,
       },
-      suggestedMin: 0
+      grid: {
+        color: 'rgba(255, 255, 255, 0.2)',
+        tickColor: 'rgba(255, 255, 255, 1)'
+      },
+      ticks: {
+        color: 'rgba(255, 255, 255, 1)',
+      },
+      suggestedMin: 0,
     }
   },
   plugins: {
