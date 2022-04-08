@@ -413,6 +413,21 @@ html, body , .container {
   justify-content: center;
   column-gap: 80px;
 }
+/* TODO:  Look into a better way of showing Tweets */
+.movie .tweetcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top:  80px;
+  column-gap: 80px;
+  row-gap: 40px;
+}
+.movie .tweetitem {
+  flex-grow: 0;
+  width:  250px;
+}
+
+
 .movie .item {
   flex-grow: 0;
 }
