@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Ryan Ziolko, Developer, @MediumFidelity
+
+# THANKS
+
+    F This Movie! folks for putting on the fest every year.
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    GitHub Project Pages, Modernizr, and a poor understanding of design
