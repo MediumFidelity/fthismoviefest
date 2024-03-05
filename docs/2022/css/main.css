@@ -432,6 +432,7 @@ html, body , .container {
   flex-grow: 0;
 }
 .movie h2 {
+    width: 700px;
     color: #fff;
     font-family: Graphik-Bold-Web,sans-serif;
     font-size: 78px;
