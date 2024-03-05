@@ -1,0 +1,247 @@
+<!doctype html>
+  <html class="no-js" lang="enUS">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recapping F This Movie Fest 2014 with data gathered from Twitter.">
+    
+    <title>F This Movie Fest 2014 Recap</title>
+
+    <meta property="og:title" content="F This Movie Fest 2014 Recap">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mediumfidelity.github.io/fthismoviefest/2014">
+    <meta property="og:image" content="https://mediumfidelity.github.io/fthismoviefest/2014/android-chrome-512x512.png">
+    <meta property="og:description" content="Recapping F This Movie Fest 2014 with data gathered from Twitter.">
+
+    <link rel="icon" type="image/ico" href="xfavicon.ico"/>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!--<link rel="stylesheet" href="css/normalize.css">-->
+    <link rel="stylesheet" href="css/main.css"> 
+
+    <meta name="theme-color" content="#fafafa">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@^3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@^2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@^1"></script>
+  </head>
+
+  <body>
+    <div class="container">
+
+      
+      <div class="navigation">
+        <div class="container">
+          <div class="item movie1">
+            <a href="#movie1"><img id="movie1thumb" src="" alt=""></a>
+          </div>
+          <div class="item movie2">
+           <a href="#movie2"><img id="movie2thumb" src="" alt=""></a>
+         </div>
+         <div class="item movie3">
+           <a href="#movie3"><img id="movie3thumb" src="" alt=""></a>
+         </div>
+         <div class="item movie4">
+           <a href="#movie4"><img id="movie4thumb" src="" alt=""></a>
+         </div>
+         <div class="item movie5">
+           <a href="#movie5"><img id="movie5thumb" src="" alt=""></a>
+         </div>
+       </div>
+     </div>
+
+
+     <div class="summary">
+      <div class="container">
+        <div class="item">
+          <h2>F</h2>
+          <h2>This</h2>
+          <h2 style="color: rgb(252, 52, 4)">Movie</h2>
+          <h2>Fest!</h2>
+        </div>
+        <div class="item">
+          <h1>2014</h1>
+          <p class="byline">
+            <span>Recapping the celebration of the movies of 1985 on Twitter</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="movie1" class="movie movie1">
+      <div class="container">
+        <div class="item">
+          <img id="movie1image" class="art" src="" alt="">
+        </div>
+        <div class="item">
+          <h2 id="movie1title"></h2>
+          <p class="byline">
+            <span id="movie1director"></span>
+          </p>
+          <p class="byline">
+            <span id="movie1tweets"></span>
+            <span id="movie1likes"></span>
+          </p>
+          <canvas class="chart" id="movie1chart" width="600" height="400"></canvas>
+        </div>
+      </div>
+      <div class="tweetcontainer">
+        <div class="tweetitem">
+
+        </div>
+        <div class="tweetitem">
+
+        </div>
+        <div class="tweetitem">
+
+        </div>
+      </div>
+    </div>
+
+    <div id="movie2" class="movie movie2">
+      <div class="container">
+        <div class="item">
+          <img id="movie2image" class="art" src="" alt="">
+        </div>
+        <div class="item">
+          <h2 id="movie2title"></h2>
+          <p class="byline">
+            <span id="movie2director"></span>
+          </p>
+          <p class="byline">
+            <span id="movie2tweets"></span>
+            <span id="movie2likes"></span>
+          </p>
+          <canvas class="chart" id="movie2chart" width="600" height="400"></canvas>
+        </div>
+      </div>
+
+      <div class="tweetcontainer">
+        <div class="tweetitem">
+
+        </div>
+        <div class="tweetitem">
+
+        </div>
+        <div class="tweetitem">
+
+        </div>
+      </div>
+    </div>
+
+    <div id="movie3" class="movie movie3">
+      <div class="container">
+        <div class="item">
+          <img id="movie3image" class="art" src="" alt="">
+        </div>
+        <div class="item">
+          <h2 id="movie3title"></h2>
+          <p class="byline">
+            <span id="movie3director"></span>
+          </p>
+          <p class="byline">
+            <span id="movie3tweets"></span>
+            <span id="movie3likes"></span>
+          </p>
+          <canvas class="chart" id="movie3chart" width="600" height="400"></canvas>
+        </div>
+      </div>
+      <div class="tweetcontainer">
+        <div class="tweetitem">
+
+        </div>
+        <div class="tweetitem">
+
+        </div>
+        <div class="tweetitem">
+
+        </div>
+      </div>
+    </div>
+
+    <div id="movie4" class="movie movie4">
+      <div class="container">
+        <div class="item">
+          <img id="movie4image" class="art" src="" alt="">
+        </div>
+        <div class="item">
+          <h2 id="movie4title"></h2>
+          <p class="byline">
+            <span id="movie4director"></span>
+          </p>
+          <p class="byline">
+            <span id="movie4tweets"></span>
+            <span id="movie4likes"></span>
+          </p>
+          <canvas class="chart" id="movie4chart" width="600" height="400"></canvas>
+        </div>
+      </div>
+      <div class="tweetcontainer">
+        <div class="tweetitem">
+
+        </div>
+        <div class="tweetitem">
+
+        </div>
+        <div class="tweetitem">
+
+        </div>
+      </div>
+    </div>
+
+    <div id="movie5" class="movie movie5">
+      <div class="container">
+        <div class="item">
+          <img id="movie5image" class="art" src="" alt="">
+        </div>
+        <div class="item">
+         <h2 id="movie5title"></h2>
+         <p class="byline">
+          <span id="movie5director"></span>
+        </p>
+        <p class="byline">
+          <span id="movie5tweets"></span>
+          <span id="movie5likes"></span>
+        </p>
+        <canvas class="chart" id="movie5chart" width="600px" height="400px"></canvas>
+      </div>
+    </div>
+    <div class="tweetcontainer">
+        <div class="tweetitem">
+
+        </div>
+        <div class="tweetitem">
+
+        </div>
+        <div class="tweetitem">
+
+        </div>
+      </div>
+  </div>
+
+
+
+  <div class="footer">
+    <div class="container">
+      <div class="item">
+        <a href="http://fthismovie.net/"><img src="img/ftm_banner_tagline.png" alt="Beam to the fine folks at F This Movie!" style="height: 80px"></a>
+      </div>
+      <div class="item">
+        <p class="byline">
+          <span>Hacked together by <a href="https://twitter.com/MediumFidelity">@MediumFidelity</a> as a thanks to the <a href="https://twitter.com/FThisMovie">@FThisMovie</a> crew.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
