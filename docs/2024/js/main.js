@@ -57,7 +57,7 @@ for (var i = 0; i < motherOfAllData.length; i++) {
     labels: movie.timestamps,
     datasets: [
       {
-        label: "Tweets",
+        label: "Posts",
         data: movie.counts,
         borderColor: movie.chartLineColor,
         backgroundColor: movie.chartFillColor,
@@ -77,7 +77,7 @@ for (var i = 0; i < motherOfAllData.length; i++) {
 
   document.getElementById('movie' + movie.id + 'title').innerHTML = movie.name
   document.getElementById('movie' + movie.id + 'director').innerHTML = 'Directed by ' + movie.director
-  document.getElementById('movie' + movie.id + 'tweets').innerHTML = movie.count + ' tweets'
+  document.getElementById('movie' + movie.id + 'tweets').innerHTML = movie.count + ' posts'
   document.getElementById('movie' + movie.id + 'likes').innerHTML = movie.likes + ' likes'
 
   var baseImgPath = 'img/art/'
