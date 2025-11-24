@@ -1,247 +1,760 @@
-<!doctype html>
-  <html class="no-js" lang="enUS">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Recapping F This Movie Fest 2012 with data gathered from Twitter.">
-    
-    <title>F This Movie Fest 2012 Recap</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ff3e3e">
+  <title>F This Movie Fest 2012 Recap</title>
+  <meta name="description" content="Recap of F This Movie Fest 2012 with stats and post highlights.">
+  <link rel="canonical" href="https://mediumfidelity.github.io/fthismoviefest/2012/">
 
-    <meta property="og:title" content="F This Movie Fest 2012 Recap">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mediumfidelity.github.io/fthismoviefest/2012">
-    <meta property="og:image" content="https://mediumfidelity.github.io/fthismoviefest/2012/android-chrome-512x512.png">
-    <meta property="og:description" content="Recapping F This Movie Fest 2012 with data gathered from Twitter.">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mediumfidelity.github.io/fthismoviefest/2012/">
+  <meta property="og:title" content="F This Movie Fest 2012 Recap">
+  <meta property="og:description" content="Recap of F This Movie Fest 2012 with stats and post highlights.">
+  <meta property="og:image" content="https://mediumfidelity.github.io/fthismoviefest/2012/images/ftmf-2012-poster.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="F This Movie Fest Archive">
+  <meta property="og:locale" content="en_US">
 
-    <link rel="icon" type="image/ico" href="xfavicon.ico"/>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://mediumfidelity.github.io/fthismoviefest/2012/">
+  <meta name="twitter:title" content="F This Movie Fest 2012 Recap">
+  <meta name="twitter:description" content="Recap of F This Movie Fest 2012 with stats and post highlights.">
+  <meta name="twitter:image" content="https://mediumfidelity.github.io/fthismoviefest/2012/images/ftmf-2012-poster.jpg">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
 
-    <!--<link rel="stylesheet" href="css/normalize.css">-->
-    <link rel="stylesheet" href="css/main.css"> 
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&display=swap">
 
-    <meta name="theme-color" content="#fafafa">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@^3"></script>
-    <script src="https://cdn.jsdelivr.net/npm/luxon@^2"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@^1"></script>
-  </head>
+  <!-- Chart.js + date-fns -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/date-fns@2.30.0/index.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
 
-  <body>
-    <div class="container">
+  <link rel="stylesheet" href="../tailwind.css">
+  <style>
+    :root {
+      --primary: #ff3e3e;
+      --secondary: #1a1a2e;
+      --accent: #f9c74f;
+      --year-accent: var(--accent);
+    }
+    body { font-family:'Oswald',sans-serif; background: radial-gradient(circle at top,#111827 0%,#020617 65%,#000 100%); min-height:100vh; color:#fff; }
+    .title-font{font-family:'Bebas Neue',sans-serif}
+    .glitch{position:relative}
+    .glitch::before,.glitch::after{content:attr(data-text);position:absolute;inset:0;width:100%;height:100%;opacity:.6;mix-blend-mode:screen}
+    .glitch::before{color:#0ff;animation:glitch 3s infinite;z-index:-1}
+    .glitch::after{color:#f0f;animation:glitch 2s infinite reverse;z-index:-2}
+    @keyframes glitch{0%{transform:translate(0,0)}20%{transform:translate(-2px,2px)}40%{transform:translate(-2px,-2px)}60%{transform:translate(2px,2px)}80%{transform:translate(2px,-2px)}100%{transform:translate(0,0)}}
+    .film-strip{background-image:repeating-linear-gradient(0deg,#000,#000 2px,transparent 2px,transparent 20px);background-size:100% 22px}
+    .chart-shell{background:rgba(15,23,42,.5);backdrop-filter:blur(10px);border:1px solid rgba(255,62,62,.12);border-radius:1rem;padding:1.5rem}
+    .chart-shell--tall .chart-wrapper{height:340px}
+    .chart-shell--mid .chart-wrapper{height:280px}
+    #movie-overlays{position:absolute;pointer-events:none}
+    .movie-overlay{position:absolute;background:rgba(255,62,62,.14);border:1px solid rgba(249,199,79,.45);border-radius:.35rem;height:100%;cursor:pointer;pointer-events:auto;overflow:hidden}
+    .movie-overlay span{position:absolute;top:.35rem;left:50%;transform:translateX(-50%);font-size:.6rem;font-weight:700;white-space:nowrap;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+    .movie-section{background:rgba(30,41,59,.85);border:1px solid rgba(248,250,252,.015);border-radius:1.05rem;padding:1.25rem 1.25rem 1.35rem;backdrop-filter:blur(6px);box-shadow:0 18px 35px rgba(0,0,0,.35);position:relative;overflow:hidden}
+    .movie-section::before{content:"";position:absolute;inset:0;height:4px;background:linear-gradient(90deg,var(--primary),var(--year-accent));opacity:.9;pointer-events:none}
+    .movie-grid{display:grid;grid-template-columns:1fr;gap:1.25rem}
+    .movie-poster{display:flex;align-items:start;justify-content:center}
+    .movie-poster-inner{border-radius:.85rem;overflow:hidden;border:1px solid rgba(148,163,184,.25);box-shadow:0 16px 35px rgba(0,0,0,.3);display:inline-block;line-height:0}
+    .movie-poster img{display:block;max-width:100%;height:auto}
+    .movie-title{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;letter-spacing:.04em}
+    .movie-time{color:rgba(255,255,255,.6);font-size:.875rem}
+    .movie-director{color:rgba(249,199,79,1);font-weight:500;margin-top:.25rem}
+    .movie-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:.75rem}
+    .movie-stat{background:rgba(15,23,42,.45);border:1px solid rgba(255,62,62,.1);border-radius:.75rem;padding:.65rem .75rem;text-align:left}
+    .movie-stat .stat-value{font-size:1.6rem;font-weight:700;line-height:1.1}
+    .movie-stat .stat-label{font-size:.7rem;text-transform:uppercase;color:rgba(255,255,255,.4);letter-spacing:.05em;margin-top:.25rem}
+    .movie-chart-wrapper{height:260px}
+    .movie-top-posts{display:flex;flex-direction:column;gap:1rem;border-top:1px solid rgba(226,232,240,.04);padding-top:.35rem}
+    .movie-top-posts .post-card{background:rgba(15,23,42,.55);border:1px solid rgba(255,62,62,.16);border-left:4px solid rgba(255,62,62,.95);border-radius:.9rem;padding:.85rem 1rem .85rem 1.05rem;transition:transform .15s ease-out,box-shadow .15s ease-out,background .15s ease-out}
+    .movie-top-posts .post-card:hover{background:rgba(15,23,42,.95);transform:translateY(-1px);box-shadow:0 10px 28px rgba(0,0,0,.28)}
+    .post-meta-row{display:flex;justify-content:space-between;gap:.75rem;align-items:flex-start;margin-bottom:.4rem}
+    .post-author-block{display:flex;flex-direction:column;gap:.15rem}
+    .post-handle{color:rgba(249,199,79,1);font-weight:600}
+    .post-display{font-size:.9rem;color:rgba(255,255,255,.6);line-height:1.1}
+    .post-time{font-size:.65rem;color:rgba(250,250,250,.45);white-space:nowrap}
+    .post-text{color:#fff;line-height:1.35}
+    .post-stats span{font-size:.7rem}
+    .participant-card{background:rgba(15,23,42,.4);border:1px solid rgba(148,163,184,.15);border-radius:.75rem;padding:.85rem 1rem}
+    .stat-card{background:rgba(15,23,42,.4);border:1px solid rgba(148,163,184,.15);border-radius:1rem;padding:.9rem .95rem .9rem;display:flex;flex-direction:column;gap:.25rem}
+    .stat-card .stat-title{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(241,245,249,.45)}
+    .stat-card .stat-value{font-size:2.25rem;font-weight:700;line-height:1}
+    .coming-soon{background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.3);border-radius:1rem;padding:2rem;text-align:center}
+    .coming-soon h3{color:#fbbf24;font-size:1.5rem;margin-bottom:1rem}
+    .coming-soon p{color:rgba(255,255,255,.6)}
+    @media (min-width:1024px){.movie-grid{grid-template-columns:260px minmax(0,1fr)}.movie-top-posts{grid-column:1/-1}}
+    @media (max-width:1023px){.movie-grid{justify-items:center}.movie-poster-inner{max-width:260px}}
+    @media (max-width:768px){.chart-shell--tall .chart-wrapper{height:300px}.movie-chart-wrapper{height:190px}}
+  </style>
+</head>
+<body class="text-white">
 
-      
-      <div class="navigation">
-        <div class="container">
-          <div class="item movie1">
-            <a href="#movie1"><img id="movie1thumb" src="" alt=""></a>
+  <!-- HERO / header -->
+  <header class="relative overflow-hidden border-b border-red-500/20">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="film-strip absolute inset-0 opacity-10"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-4 pt-14 pb-10 md:pt-16 md:pb-14">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex-1">
+          <h1 id="hero-title" class="glitch text-4xl md:text-6xl title-font leading-none mb-3" data-text="F THIS MOVIE FEST!">
+            F THIS MOVIE FEST!
+          </h1>
+          <p id="hero-byline" class="text-sm md:text-base text-slate-200/75 max-w-xl">
+            Recapping and archiving the celebration of movies.
+          </p>
+        </div>
+        <div class="flex md:flex-col gap-3">
+          <a href="../index.html" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 px-5 py-2 rounded-full text-sm font-semibold transition">
+            <i class="fa fa-arrow-left"></i> Back to Archive
+          </a>
+          <div class="inline-flex items-center gap-2 bg-slate-900/50 border border-red-500/40 px-5 py-2 rounded-full text-xs md:text-sm">
+            <span id="year-label" class="font-semibold">Loading year…</span>
           </div>
-          <div class="item movie2">
-           <a href="#movie2"><img id="movie2thumb" src="" alt=""></a>
-         </div>
-         <div class="item movie3">
-           <a href="#movie3"><img id="movie3thumb" src="" alt=""></a>
-         </div>
-         <div class="item movie4">
-           <a href="#movie4"><img id="movie4thumb" src="" alt=""></a>
-         </div>
-         <div class="item movie5">
-           <a href="#movie5"><img id="movie5thumb" src="" alt=""></a>
-         </div>
-       </div>
-     </div>
-
-
-     <div class="summary">
-      <div class="container">
-        <div class="item">
-          <h2>F</h2>
-          <h2>This</h2>
-          <h2 style="color: rgb(252, 52, 4)">Movie</h2>
-          <h2>Fest!</h2>
         </div>
-        <div class="item">
-          <h1>2012</h1>
-          <p class="byline">
-            <span>Recapping the celebration of the movies of 1982 on Twitter</span>
-          </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="max-w-6xl mx-auto px-4 py-10 md:py-12">
+    <!-- loading / error -->
+    <div id="loading" class="text-center py-16 text-slate-200/75">
+      <div class="inline-flex flex-col items-center gap-3">
+        <span class="animate-spin w-8 h-8 rounded-full border-4 border-red-500 border-t-transparent"></span>
+        <p>Loading data…</p>
+      </div>
+    </div>
+    <div id="error" class="hidden bg-red-700/70 border border-red-400/70 rounded-lg p-4 my-4 text-sm"></div>
+
+    <!-- Coming soon message (hidden by default) -->
+    <div id="coming-soon" class="hidden">
+      <div class="coming-soon">
+        <h3><i class="fas fa-clock mr-2"></i>Data Coming Soon</h3>
+        <p>Data for 2012 hasn't been processed yet. Check back soon!</p>
+      </div>
+    </div>
+
+    <!-- Incomplete data notice (hidden by default) -->
+    <div id="incomplete-data-notice" class="hidden mb-6 bg-blue-900/30 border border-blue-500/40 rounded-lg p-4">
+      <div class="flex gap-3">
+        <div class="flex-shrink-0 text-blue-400 text-xl">
+          <i class="fas fa-info-circle"></i>
+        </div>
+        <div class="flex-1">
+          <h3 class="text-blue-300 font-semibold mb-1">Note about Participant Counts</h3>
+          <p id="incomplete-data-message" class="text-sm text-slate-300 leading-relaxed"></p>
         </div>
       </div>
     </div>
 
-    <div id="movie1" class="movie movie1">
-      <div class="container">
-        <div class="item">
-          <img id="movie1image" class="art" src="" alt="">
+    <div id="content" class="space-y-10 hidden">
+      <!-- top stats -->
+      <section>
+        <h2 class="text-xl md:text-xl font-semibold mb-4 flex items-center gap-2">
+          <span class="inline-flex w-10 h-10 items-center justify-center bg-red-600/70 rounded-full text-xl">📈</span>
+          Overview
+        </h2>
+
+        <!-- Poster + Stats Layout -->
+        <div class="flex flex-col lg:flex-row gap-6 mb-4">
+          <!-- Left Column: Poster + Announcement -->
+          <div class="flex flex-col gap-4 flex-shrink-0 items-center lg:items-start">
+            <div id="fest-poster-main" class="hidden w-fit">
+              <img id="fest-poster-main-img" src="" alt="Fest Poster" class="rounded-xl border-2 border-red-500/50 shadow-2xl w-64 h-auto object-cover">
+            </div>
+
+            <!-- fest announcement link -->
+            <div id="fest-announcement" class="hidden">
+              <a id="fest-url-link" href="#" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-red-600/20 hover:bg-red-600/30 border border-red-500/40 px-4 py-2 rounded-lg text-sm font-semibold transition">
+                <i class="fa fa-external-link-alt"></i> View Fest Announcement
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Stats Grid -->
+          <div class="flex-1">
+            <div id="overall-stats" class="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
+          </div>
         </div>
-        <div class="item">
-          <h2 id="movie1title"></h2>
-          <p class="byline">
-            <span id="movie1director"></span>
+
+        <!-- fest meta -->
+        <div id="fest-meta" class="bg-slate-900/40 border border-slate-700/40 rounded-xl px-4 py-3 text-sm text-slate-200/80 hidden">
+          <!-- filled by JS -->
+        </div>
+      </section>
+
+      <!-- timeline -->
+      <section>
+        <div class="chart-shell chart-shell--tall relative">
+          <div class="flex items-center justify-between mb-3 gap-2">
+            <p class="text-sm text-slate-200/80 flex items-center gap-2">
+              <i class="fa fa-chart-area text-red-400"></i>
+              Interactions over time (posts + replies + likes + reposts)
+            </p>
+            <p class="text-[0.65rem] uppercase tracking-wide text-slate-400">Tap the red bars in the chart to jump to a movie</p>
+          </div>
+          <div class="chart-wrapper relative" style="position:relative;">
+            <canvas id="timeline-chart"></canvas>
+            <div id="movie-overlays"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- movies -->
+      <section>
+        <h2 class="text-xl md:text-xl font-semibold mb-4 flex items-center gap-2">
+          <span class="inline-flex w-10 h-10 items-center justify-center bg-red-600/70 rounded-full text-xl">🎥</span>
+          Movies
+        </h2>
+        <div id="movie-sections" class="space-y-10"></div>
+      </section>
+
+      <!-- participants -->
+      <section>
+        <h2 class="text-xl md:text-xl font-semibold mb-4 flex items-center gap-2">
+          <span class="inline-flex w-10 h-10 items-center justify-center bg-red-600/70 rounded-full text-xl">🏆</span>
+          Top Participants
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6" id="top-participants">
+          <div>
+            <h3 class="text-lg font-semibold mb-3">Most Posts</h3>
+            <div id="top-posters" class="grid grid-cols-1 gap-3"></div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-3">Most Likes Received</h3>
+            <div id="top-liked-posters" class="grid grid-cols-1 gap-3"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="bg-black py-12 mt-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <h3 class="text-2xl font-bold title-font mb-2">F THIS MOVIE FEST!</h3>
+          <p class="text-gray-400">Celebrating cinema since 2012</p>
+          <p class="text-gray-400 text-sm mt-2">
+            Hacked together with ❤️ by <a href="https://bsky.app/profile/mediumfidelity.bsky.social" class="text-red-400 hover:text-red-300">@MediumFidelity</a>
+            as a thanks to the <a href="https://bsky.app/profile/fthismovie.bsky.social" class="text-red-400 hover:text-red-300">@FThisMovie</a> crew.
           </p>
-          <p class="byline">
-            <span id="movie1tweets"></span>
-            <span id="movie1likes"></span>
-          </p>
-          <canvas class="chart" id="movie1chart" width="600" height="400"></canvas>
+        </div>
+        <div class="flex space-x-6">
+          <a href="https://twitter.com/FThisMovie" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+          <a href="https://bsky.app/profile/fthismovie.bsky.social" class="text-gray-400 hover:text-white text-xl">🦋</a>
         </div>
       </div>
-      <div class="tweetcontainer">
-        <div class="tweetitem">
-
-        </div>
-        <div class="tweetitem">
-
-        </div>
-        <div class="tweetitem">
-
-        </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-xs">
+        <p>F This Movie Fest! Archive</p>
       </div>
     </div>
+  </footer>
 
-    <div id="movie2" class="movie movie2">
-      <div class="container">
-        <div class="item">
-          <img id="movie2image" class="art" src="" alt="">
+  <script>
+    let IS_MOBILE = window.matchMedia('(max-width: 768px)').matches;
+    const YEAR = '2012';
+
+    let festData = null;
+    let charts = { timeline: null, perMovie: [] };
+    let resizeTimer = null;
+
+    document.addEventListener('DOMContentLoaded', loadData);
+
+    async function loadData() {
+      try {
+        const response = await fetch('fest_data.json');
+        if (!response.ok) {
+          // Data doesn't exist yet - show coming soon message
+          showComingSoon();
+          return;
+        }
+        festData = await response.json();
+
+        document.getElementById('loading').classList.add('hidden');
+        document.getElementById('content').classList.remove('hidden');
+
+        const meta = festData.fest_meta || {};
+        const yearLabel = document.getElementById('year-label');
+        yearLabel.textContent = meta.fest_year
+          ? `Fest ${meta.fest_year}${meta.movies_year ? ' • Movies: ' + meta.movies_year : ''}`
+          : 'F This Movie Fest';
+
+        const hero = document.getElementById('hero-title');
+        if (meta.fest_year) {
+          const titleText = `F THIS MOVIE FEST ${meta.fest_year}!`;
+          hero.textContent = titleText;
+          hero.setAttribute('data-text', titleText);
+        }
+
+        const heroByline = document.getElementById('hero-byline');
+        if (meta.movies_year) {
+          const bylineText = `Recapping and archiving the celebration of the movies of ${meta.movies_year}.`;
+          heroByline.textContent = bylineText;
+          heroByline.setAttribute('data-text', bylineText);
+        }
+
+        // Show fest poster in main overview section if available
+        if (meta.fest_poster) {
+          const posterImg = document.getElementById('fest-poster-main-img');
+          posterImg.src = meta.fest_poster; // Path is already relative to year directory
+          posterImg.alt = `F This Movie Fest ${meta.fest_year || ''} Poster`;
+          document.getElementById('fest-poster-main').classList.remove('hidden');
+        }
+
+        // Show incomplete data notice if liker data is not available
+        if (meta.has_liker_data === false) {
+          const notice = document.getElementById('incomplete-data-notice');
+          const message = document.getElementById('incomplete-data-message');
+
+          // Use custom message if provided, otherwise use default
+          const messageText = meta.participants_note ||
+            'Participant counts for this year include only authors (people who posted). ' +
+            'Likes data was not available, so people who only liked posts are not included in the participant count.';
+
+          message.textContent = messageText;
+          notice.classList.remove('hidden');
+        }
+
+        renderDashboard();
+      } catch (err) {
+        document.getElementById('loading').classList.add('hidden');
+        const errBox = document.getElementById('error');
+        errBox.classList.remove('hidden');
+        errBox.textContent = 'Error loading data: ' + err.message;
+      }
+    }
+
+    function showComingSoon() {
+      document.getElementById('loading').classList.add('hidden');
+      document.getElementById('coming-soon').classList.remove('hidden');
+
+      // Update header with year
+      const hero = document.getElementById('hero-title');
+      const titleText = `F THIS MOVIE FEST ${YEAR}!`;
+      hero.textContent = titleText;
+      hero.setAttribute('data-text', titleText);
+
+      const yearLabel = document.getElementById('year-label');
+      yearLabel.textContent = `Fest ${YEAR}`;
+    }
+
+    function renderDashboard() {
+      renderOverallStats();
+      renderTimelineChart();
+      renderMovieSections();
+      renderTopParticipants();
+      setTimeout(renderMovieOverlays, 60);
+    }
+
+    function renderOverallStats() {
+      const s = festData.fest_stats || {};
+      const cards = `
+        <div class="stat-card"><div class="stat-title">Posts</div><div class="stat-value">${(s.posts||0).toLocaleString()}</div></div>
+        <div class="stat-card"><div class="stat-title">Replies</div><div class="stat-value">${(s.replies||0).toLocaleString()}</div></div>
+        <div class="stat-card"><div class="stat-title">Likes</div><div class="stat-value">${(s.likes||0).toLocaleString()}</div></div>
+        <div class="stat-card"><div class="stat-title">Reposts</div><div class="stat-value">${(s.reposts||0).toLocaleString()}</div></div>
+        <div class="stat-card"><div class="stat-title">Participants</div><div class="stat-value">${(s.participants||0).toLocaleString()}</div></div>
+        <div class="stat-card"><div class="stat-title">Movies Watched</div><div class="stat-value">${festData.movies ? festData.movies.length : 0}</div></div>
+      `;
+      document.getElementById('overall-stats').innerHTML = cards;
+
+      // Show fest announcement link if available
+      const meta = festData.fest_meta || {};
+      if (meta.fest_url) {
+        const festUrlLink = document.getElementById('fest-url-link');
+        festUrlLink.href = meta.fest_url;
+        document.getElementById('fest-announcement').classList.remove('hidden');
+      }
+
+      // meta panel
+      const metaBox = document.getElementById('fest-meta');
+      const facts = Array.isArray(meta.fun_facts) ? meta.fun_facts : [];
+      const factsHtml = facts.length
+        ? `<ul class="list-disc pl-5 mt-2 space-y-1">${facts.map(f => `<li>${escapeHtml(String(f))}</li>`).join('')}</ul>`
+        : `<p class="text-slate-400 text-sm">Fun facts coming soon…</p>`;
+      const dateHtml = meta.fest_date ? new Date(meta.fest_date + 'T00:00:00Z').toLocaleDateString() : '—';
+
+      metaBox.innerHTML = `
+        <div class="flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex w-8 h-8 items-center justify-center rounded-full bg-red-600/70">ℹ️</span>
+            <div>
+              <div class="text-sm"><span class="text-slate-400">Fest Year:</span> <span class="font-semibold">${meta.fest_year ?? '—'}</span></div>
+              <div class="text-sm"><span class="text-slate-400">Fest Date (UTC):</span> <span class="font-semibold">${dateHtml}</span></div>
+              <div class="text-sm"><span class="text-slate-400">Movies Year:</span> <span class="font-semibold">${meta.movies_year ?? '—'}</span></div>
+            </div>
+          </div>
         </div>
-        <div class="item">
-          <h2 id="movie2title"></h2>
-          <p class="byline">
-            <span id="movie2director"></span>
-          </p>
-          <p class="byline">
-            <span id="movie2tweets"></span>
-            <span id="movie2likes"></span>
-          </p>
-          <canvas class="chart" id="movie2chart" width="600" height="400"></canvas>
+        <div class="mt-3">
+          <div class="uppercase text-[0.65rem] tracking-wide text-slate-400">Fun Facts</div>
+          ${factsHtml}
         </div>
-      </div>
+      `;
+      //metaBox.classList.remove('hidden');
+    }
 
-      <div class="tweetcontainer">
-        <div class="tweetitem">
+    // sum to interactions (posts + replies + likes + reposts), bucketed
+    function bucketTimeline(timeline, bucketMinutes) {
+      const BUCKET_MS = bucketMinutes * 60 * 1000;
+      const map = new Map();
+      timeline.forEach(t => {
+        const ts = new Date(t.minute).getTime();
+        const bucketStart = Math.floor(ts / BUCKET_MS) * BUCKET_MS;
+        if (!map.has(bucketStart)) {
+          map.set(bucketStart, {
+            minute: new Date(bucketStart).toISOString(),
+            posts: 0, replies: 0, likes: 0, reposts: 0, interactions: 0
+          });
+        }
+        const b = map.get(bucketStart);
+        b.posts   += (t.posts   || 0);
+        b.replies += (t.replies || 0);
+        b.likes   += (t.likes   || 0);
+        b.reposts += (t.reposts || 0);
+        b.interactions += (t.posts||0)+(t.replies||0)+(t.likes||0)+(t.reposts||0);
+      });
+      return Array.from(map.values()).sort((a, b) => new Date(a.minute) - new Date(b.minute));
+    }
 
-        </div>
-        <div class="tweetitem">
+    function renderTimelineChart() {
+      const ctx = document.getElementById('timeline-chart').getContext('2d');
 
-        </div>
-        <div class="tweetitem">
+      const sourceTimeline = festData.timeline || [];
+      const timelineForChart = IS_MOBILE ? bucketTimeline(sourceTimeline, 5) : bucketTimeline(sourceTimeline, 3);
 
-        </div>
-      </div>
-    </div>
+      const labels = timelineForChart.map(t => new Date(t.minute));
+      const interactions = timelineForChart.map(t => t.interactions);
 
-    <div id="movie3" class="movie movie3">
-      <div class="container">
-        <div class="item">
-          <img id="movie3image" class="art" src="" alt="">
-        </div>
-        <div class="item">
-          <h2 id="movie3title"></h2>
-          <p class="byline">
-            <span id="movie3director"></span>
-          </p>
-          <p class="byline">
-            <span id="movie3tweets"></span>
-            <span id="movie3likes"></span>
-          </p>
-          <canvas class="chart" id="movie3chart" width="600" height="400"></canvas>
-        </div>
-      </div>
-      <div class="tweetcontainer">
-        <div class="tweetitem">
+      charts.timeline = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels,
+          datasets: [{
+            label: 'Interactions',
+            data: interactions,
+            borderColor: '#ff3e3e',
+            backgroundColor: 'rgba(255, 62, 62, 0.16)',
+            tension: 0.4,
+            fill: true,
+            pointRadius: 0
+          }]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false, animation: false,
+          scales: {
+            x: { type: 'time', time: { unit: 'hour', displayFormats: { hour: 'h:mm a' } },
+                 ticks: { color: 'rgba(255,255,255,.45)' }, grid: { color: 'rgba(148,163,184,.1)' } },
+            y: { beginAtZero: true, ticks: { color: 'rgba(255,255,255,.45)', display: !IS_MOBILE },
+                 grid: { color: 'rgba(148,163,184,.08)' } }
+          },
+          plugins: { legend: { display: false } }
+        }
+      });
+    }
 
-        </div>
-        <div class="tweetitem">
+    function renderMovieOverlays() {
+      const chart = charts.timeline;
+      if (!chart) return;
 
-        </div>
-        <div class="tweetitem">
+      const overlay = document.getElementById('movie-overlays');
+      overlay.innerHTML = '';
 
-        </div>
-      </div>
-    </div>
+      const chartArea = chart.chartArea;
+      if (!chartArea) return;
 
-    <div id="movie4" class="movie movie4">
-      <div class="container">
-        <div class="item">
-          <img id="movie4image" class="art" src="" alt="">
-        </div>
-        <div class="item">
-          <h2 id="movie4title"></h2>
-          <p class="byline">
-            <span id="movie4director"></span>
-          </p>
-          <p class="byline">
-            <span id="movie4tweets"></span>
-            <span id="movie4likes"></span>
-          </p>
-          <canvas class="chart" id="movie4chart" width="600" height="400"></canvas>
-        </div>
-      </div>
-      <div class="tweetcontainer">
-        <div class="tweetitem">
+      const { left, right, top, bottom } = chartArea;
+      const width = right - left;
+      const height = bottom - top;
 
-        </div>
-        <div class="tweetitem">
+      overlay.style.left = left + 'px';
+      overlay.style.top = top + 'px';
+      overlay.style.width = width + 'px';
+      overlay.style.height = height + 'px';
 
-        </div>
-        <div class="tweetitem">
+      (festData.movies || []).forEach((movie) => {
+        // Movie start in CST (with -06:00)
+        const start = new Date(movie.start_time);
+        // End = start + runtime minutes
+        const end = new Date(start.getTime() + (movie.runtime || 0) * 60_000);
 
-        </div>
-      </div>
-    </div>
+        const xStart = chart.scales.x.getPixelForValue(start) - left;
+        const xEnd   = chart.scales.x.getPixelForValue(end) - left;
+        const movieWidth = Math.max(4, xEnd - xStart);
 
-    <div id="movie5" class="movie movie5">
-      <div class="container">
-        <div class="item">
-          <img id="movie5image" class="art" src="" alt="">
-        </div>
-        <div class="item">
-         <h2 id="movie5title"></h2>
-         <p class="byline">
-          <span id="movie5director"></span>
-        </p>
-        <p class="byline">
-          <span id="movie5tweets"></span>
-          <span id="movie5likes"></span>
-        </p>
-        <canvas class="chart" id="movie5chart" width="600px" height="400px"></canvas>
-      </div>
-    </div>
-    <div class="tweetcontainer">
-        <div class="tweetitem">
+        const div = document.createElement('div');
+        div.className = 'movie-overlay';
+        div.style.left = xStart + 'px';
+        div.style.width = movieWidth + 'px';
 
-        </div>
-        <div class="tweetitem">
+        const label = document.createElement('span');
+        label.textContent = IS_MOBILE ? shortenMovieTitle(movie.title) : movie.title;
+        div.appendChild(label);
 
-        </div>
-        <div class="tweetitem">
+        div.addEventListener('click', () => {
+          const el = document.getElementById(movie._sectionId);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
 
-        </div>
-      </div>
-  </div>
+        overlay.appendChild(div);
+      });
+    }
 
+    function shortenMovieTitle(title) {
+      if ((title||'').length <= 10) return title || '';
+      const parts = title.split(' ');
+      if (parts.length > 1) {
+        const last = parts[parts.length - 1];
+        if (last.length <= 10) return last;
+      }
+      return title.slice(0, 9) + '…';
+    }
 
+    // Pull the main day timeline and slice to a movie window
+    function getMovieWindowTimeline(movie) {
+      const start = new Date(movie.window_start).getTime();
+      const end   = new Date(movie.window_end).getTime();
+      const slice = (festData.timeline || []).filter(t => {
+        const ts = new Date(t.minute).getTime();
+        return ts >= start && ts <= end;
+      });
+      return slice;
+    }
 
-  <div class="footer">
-    <div class="container">
-      <div class="item">
-        <a href="http://fthismovie.net/"><img src="img/ftm_banner_tagline.png" alt="Beam to the fine folks at F This Movie!" style="height: 80px"></a>
-      </div>
-      <div class="item">
-        <p class="byline">
-          <span>Hacked together by <a href="https://twitter.com/MediumFidelity">@MediumFidelity</a> as a thanks to the <a href="https://twitter.com/FThisMovie">@FThisMovie</a> crew.</span>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+    function renderMovieSections() {
+      const container = document.getElementById('movie-sections');
+      (festData.movies || []).forEach((movie, index) => {
+        const sectionId = `movie-section-${index}`;
+        movie._sectionId = sectionId;
 
+        const poster = movie.poster_url || movie.poster || null;
+        const director = movie.director || movie.directed_by || null;
 
-<script src="js/data.js"></script>
-<script src="js/main.js"></script>
+        const stats = movie.stats || {};
+        const movieHtml = `
+          <article id="${sectionId}" class="movie-section">
+            <div class="movie-grid">
+              ${poster ? `
+                <div class="movie-poster">
+                  <div class="movie-poster-inner">
+                    <img src="${poster}" alt="${escapeHtml(movie.title)} poster" loading="lazy">
+                  </div>
+                </div>` : ''}
+              <div class="flex flex-col gap-4">
+                <header class="border-b border-slate-200/10 pb-3">
+                  <h3 class="movie-title">${escapeHtml(movie.title || '')}</h3>
+                  <p class="movie-time">${formatMovieLocalWindow(movie)}</p>
+                  ${director ? `<p class="movie-director">Directed by ${escapeHtml(director)}</p>` : ''}
+                </header>
 
+                <div class="movie-stats">
+                  <div class="movie-stat"><div class="stat-value">${(stats.posts||0)}</div><div class="stat-label">Posts</div></div>
+                  <div class="movie-stat"><div class="stat-value">${(stats.replies||0)}</div><div class="stat-label">Replies</div></div>
+                  <div class="movie-stat"><div class="stat-value">${(stats.likes||0)}</div><div class="stat-label">Likes</div></div>
+                  <div class="movie-stat"><div class="stat-value">${(stats.reposts||0)}</div><div class="stat-label">Reposts</div></div>
+                  <div class="movie-stat"><div class="stat-value">${(stats.unique_authors||0)}</div><div class="stat-label">Unique Authors</div></div>
+                  <div class="movie-stat"><div class="stat-value">${(stats.participants||0)}</div><div class="stat-label">Participants</div></div>
+                </div>
+
+                <div class="movie-chart-wrapper">
+                  <canvas id="movie-chart-${index}"></canvas>
+                </div>
+              </div>
+
+              <div class="movie-top-posts">
+                <h4 class="text-lg font-semibold flex items-center gap-2">
+                  <span class="inline-flex w-10 h-10 items-center justify-center rounded-full bg-red-500/70 text-xl">🔥</span>
+                  Top posts
+                </h4>
+                ${renderTopPosts(movie.top_posts)}
+              </div>
+            </div>
+          </article>
+        `;
+
+        container.insertAdjacentHTML('beforeend', movieHtml);
+        renderMovieChart(movie, index);
+      });
+    }
+
+    function renderMovieChart(movie, index) {
+      const ctx = document.getElementById(`movie-chart-${index}`).getContext('2d');
+
+      // Build per-movie series by slicing the global timeline
+      const source = getMovieWindowTimeline(movie);
+      const timelineForChart = IS_MOBILE ? bucketTimeline(source, 5) : source;
+
+      const labels  = timelineForChart.map(t => new Date(t.minute));
+      const posts   = timelineForChart.map(t => t.posts   || 0);
+      const replies = timelineForChart.map(t => t.replies || 0);
+      const likes   = timelineForChart.map(t => t.likes   || 0);
+      const reposts = timelineForChart.map(t => t.reposts || 0);
+
+      const chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels,
+          datasets: [
+            { label:'Posts',   data:posts,   borderColor:'#ff3e3e', backgroundColor:'rgba(255,62,62,0.12)', tension:.4, fill:true, pointRadius:IS_MOBILE?3:0, pointHitRadius:12 },
+            { label:'Replies', data:replies, borderColor:'#94a3b8', backgroundColor:'rgba(148,163,184,0.12)', tension:.4, fill:true, pointRadius:IS_MOBILE?3:0, pointHitRadius:12 },
+            { label:'Likes',   data:likes,   borderColor:'#f9c74f', backgroundColor:'rgba(249,199,79,0.12)', tension:.4, fill:true, pointRadius:IS_MOBILE?3:0, pointHitRadius:12 },
+            { label:'Reposts', data:reposts, borderColor:'#38bdf8', backgroundColor:'rgba(56,189,248,0.12)', tension:.4, fill:true, pointRadius:IS_MOBILE?3:0, pointHitRadius:12 }
+          ]
+        },
+        options: {
+          responsive:true, maintainAspectRatio:false,
+          interaction:{ mode:'index', intersect:false },
+          scales:{
+            x:{ type:'time', time:{ unit:'minute', displayFormats:{ minute:'h:mm a' } },
+                ticks:{ display:!IS_MOBILE, color:'rgba(255,255,255,.45)' }, grid:{ color:'rgba(148,163,184,0.08)' }},
+            y:{ beginAtZero:true, ticks:{ color:'rgba(255,255,255,.45)', maxTicksLimit:IS_MOBILE?4:6 }, grid:{ color:'rgba(148,163,184,0.08)' }}
+          },
+          plugins:{
+            legend:{ display:true, labels:{ color:'white', usePointStyle:true, boxWidth:6 }},
+            tooltip:{ callbacks:{ title:(ctx)=> ctx.length ? new Date(ctx[0].parsed.x).toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'}) : '' } }
+          }
+        }
+      });
+      charts.perMovie.push(chart);
+    }
+
+    function renderTopPosts(posts = []) {
+      if (!posts.length) return `<p class="text-xs text-slate-400">No top posts found for this movie.</p>`;
+      return posts.map(post => {
+        const url = post.url || null;
+        const displayName = post.author_display_name || null;
+        const localTime = formatPostLocalTime(post);
+        const handle = post.author_handle || 'unknown';
+        const content = `
+          <div class="post-card ${url ? 'cursor-pointer' : ''}">
+            <div class="post-meta-row">
+              <div class="post-author-block">
+                <p class="post-handle">@${escapeHtml(handle)}</p>
+                ${displayName ? `<p class="post-display">${escapeHtml(displayName)}</p>` : ''}
+              </div>
+              ${localTime ? `<time class="post-time">${localTime}</time>` : ''}
+            </div>
+            <p class="post-text text-sm mb-3">${escapeHtml(post.text || '')}</p>
+            <div class="post-stats flex gap-3 text-slate-200/80 text-[0.7rem]">
+              <span>❤️ ${post.like_count ?? 0}</span>
+              <span>🔁 ${post.repost_count ?? 0}</span>
+              <span>💬 ${post.reply_count ?? 0}</span>
+            </div>
+          </div>`;
+        return url ? `<a href="${url}" target="_blank" rel="noopener noreferrer" class="block">${content}</a>` : content;
+      }).join('');
+    }
+
+    function formatPostLocalTime(post) {
+      const ts = post.created_at || post.createdAt || post.indexed_at || post.indexedAt || (post.record && post.record.createdAt) || post.timestamp || null;
+      if (!ts) return '';
+      const d = new Date(ts);
+      if (isNaN(d.getTime())) return '';
+      return d.toLocaleString([], { month:'short', day:'numeric', hour:'2-digit', minute:'2-digit' });
+    }
+
+    // Participants
+    function renderTopParticipants() {
+      const stats = festData.fest_stats || {};
+      renderPeopleList('top-posters', stats.top_posters || [], p => ({
+        line: `${(p.post_count||0)} posts`
+      }));
+      renderPeopleList('top-liked-posters', stats.top_liked_posters || [], p => ({
+        line: `${(p.likes_received||0)} likes`
+      }));
+    }
+
+    function renderPeopleList(containerId, arr, mapFn) {
+      const container = document.getElementById(containerId);
+      const html = arr.map(p => {
+        const { line } = mapFn(p);
+        const hasName = typeof p.display_name === 'string' && p.display_name.trim() !== '';
+        const displayHtml = hasName ? escapeHtml(p.display_name) : '&nbsp;';
+        const name = `<p class="post-display">${displayHtml}</p>`;
+        const handle = p.handle ? `@${escapeHtml(p.handle)}` : (p.id ? escapeHtml(p.id) : 'unknown');
+        const profileUrl = p.profile_url || null;
+
+        if (profileUrl) {
+          return `
+            <a href="${escapeHtml(profileUrl)}" target="_blank" rel="noopener noreferrer"
+               class="participant-card flex items-center gap-3 hover:bg-red-500/10 transition-colors">
+              <div class="w-8 h-8 rounded-full bg-red-500/50 flex items-center justify-center text-xs uppercase">@</div>
+              <div>
+                <p class="post-handle">${handle}</p>
+                ${name}
+                <p class="text-[0.8rem] text-slate-300/80">${line}</p>
+              </div>
+            </a>`;
+        }
+        return `
+          <div class="participant-card flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-red-500/50 flex items-center justify-center text-xs uppercase">@</div>
+            <div>
+              <p class="post-handle">${handle}</p>
+              ${name}
+              <p class="text-[0.8rem] text-slate-300/80">${line}</p>
+            </div>
+          </div>`;
+      }).join('');
+      container.innerHTML = html || '<p class="text-sm text-slate-400">No data.</p>';
+    }
+
+    function formatMovieLocalWindow(movie) {
+      // use start_time (local-offset string) for start label, compute end; this is OK for display
+      const startLocal = new Date(movie.start_time);
+      const endLocal = new Date(startLocal.getTime() + (movie.runtime || 0) * 60000);
+      return `${startLocal.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})} – ${endLocal.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}`;
+    }
+
+    function escapeHtml(text) {
+      const map = {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'};
+      return String(text).replace(/[&<>"']/g, m => map[m]);
+    }
+
+    // Handle window resize - redraw charts if crossing mobile breakpoint
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        const wasMobile = IS_MOBILE;
+        IS_MOBILE = window.matchMedia('(max-width: 768px)').matches;
+
+        // If we crossed the mobile breakpoint, redraw everything
+        if (wasMobile !== IS_MOBILE && festData) {
+          // Destroy existing charts
+          if (charts.timeline) {
+            charts.timeline.destroy();
+            charts.timeline = null;
+          }
+          charts.perMovie.forEach(chart => chart && chart.destroy());
+          charts.perMovie = [];
+
+          // Redraw charts
+          renderTimelineChart();
+          if (festData.movies) {
+            festData.movies.forEach((movie, index) => renderMovieChart(movie, index));
+          }
+        } else {
+          // Just update overlays
+          renderMovieOverlays();
+        }
+      }, 250);
+    });
+  </script>
 </body>
 </html>

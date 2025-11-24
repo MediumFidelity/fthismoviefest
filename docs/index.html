@@ -1,78 +1,612 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Recapping F This Movie Fest with data gathered from Twitter.">
-    <meta property="og:title" content="F This Movie Fest Recap">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff3e3e">
+    <title>F This Movie Fest Archive</title>
+    <meta name="description" content="A complete archive of F This Movie Fest celebrations from 2012-present. Data and stats from Twitter, X, and Bluesky.">
+    <link rel="canonical" href="https://mediumfidelity.github.io/fthismoviefest/">
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mediumfidelity.github.io/fthismoviefest/">
-    <meta property="og:description" content="Recapping F This Movie Fest with data gathered from Twitter.">
+    <meta property="og:title" content="F This Movie Fest Archive">
+    <meta property="og:description" content="A complete archive of F This Movie Fest celebrations from 2012-present. Data and stats from Twitter, X, and Bluesky.">
+    <meta property="og:image" content="https://mediumfidelity.github.io/fthismoviefest/images/ftmf-archive.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="F This Movie Fest Archive">
+    <meta property="og:locale" content="en_US">
 
-  <title>F This Movie Fest</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://mediumfidelity.github.io/fthismoviefest/">
+    <meta name="twitter:title" content="F This Movie Fest Archive">
+    <meta name="twitter:description" content="A complete archive of F This Movie Fest celebrations from 2012-present. Data and stats from Twitter, X, and Bluesky.">
+    <meta name="twitter:image" content="https://mediumfidelity.github.io/fthismoviefest/images/ftmf-archive.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&display=swap">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+    <link rel="stylesheet" href="tailwind.css">
+
+    <style>
+        :root {
+            --primary: #ff3e3e;
+            --secondary: #1a1a2e;
+            --accent: #f9c74f;
+        }
+
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .title-font {
+            font-family: 'Bebas Neue', cursive;
+        }
+
+        .year-card {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+
+        .year-card:hover {
+            transform: translateY(-8px) rotateX(5deg);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .year-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        .glitch {
+            position: relative;
+        }
+
+        .glitch::before, .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+
+        .glitch::before {
+            color: #0ff;
+            z-index: -1;
+            animation: glitch-effect 3s infinite;
+        }
+
+        .glitch::after {
+            color: #f0f;
+            z-index: -2;
+            animation: glitch-effect 2s infinite reverse;
+        }
+
+        @keyframes glitch-effect {
+            0% { transform: translate(0); }
+            20% { transform: translate(-3px, 3px); }
+            40% { transform: translate(-3px, -3px); }
+            60% { transform: translate(3px, 3px); }
+            80% { transform: translate(3px, -3px); }
+            100% { transform: translate(0); }
+        }
+
+        .film-strip {
+            background-image: repeating-linear-gradient(
+                0deg,
+                #000,
+                #000 2px,
+                transparent 2px,
+                transparent 20px
+            );
+            background-size: 100% 22px;
+        }
+
+        .countdown {
+            font-family: 'Bebas Neue', cursive;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+
+        .data-status {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .data-status.available {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.3));
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.4);
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+        }
+
+        .data-status.coming-soon {
+            position: absolute;
+            top: 1.5rem;
+            left: -3rem;
+            width: 12rem;
+            background: linear-gradient(135deg, #fbbf24, #f97316);
+            color: #fff;
+            text-align: center;
+            line-height: 1;
+            padding: 0.6rem 1rem;
+            transform: rotate(-45deg);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            z-index: 30;
+            font-size: 0.7rem;
+        }
+
+        .data-status.coming-soon::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 0;
+            height: 0;
+            border-left: 1.5rem solid transparent;
+            border-right: 1.5rem solid transparent;
+            border-top: 0.5rem solid #d97706;
+        }
+
+        .data-status.coming-soon::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 100%;
+            width: 0;
+            height: 0;
+            border-left: 1.5rem solid transparent;
+            border-right: 1.5rem solid transparent;
+            border-top: 0.5rem solid #d97706;
+        }
+
+        .chart-shell {
+            background: rgba(15, 23, 42, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 62, 62, 0.12);
+            border-radius: 1rem;
+            padding: 1.5rem;
+        }
+
+        .chart-wrapper {
+            height: 300px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-wrapper {
+                height: 400px;
+            }
+        }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <h1 class="hero-text">Select a Fest</h1>
-    <div class="grid">
-      <a class="year-cell" href="./2012/index.html" data-disabled="true">
-        <span class="year">2012</span>
-        <span class="featured-film">1982</span>
-      </a>
-      <a class="year-cell" href="./2013/index.html" data-disabled="true">
-        <span class="year">2013</span>
-        <span class="featured-film">1991</span>
-      </a>
-      <a class="year-cell" href="./2014/index.html" data-disabled="true">
-        <span class="year">2014</span>
-        <span class="featured-film">1985</span>
-      </a>
-      <a class="year-cell" href="./2015/index.html" data-disabled="true">
-        <span class="year">2015</span>
-        <span class="featured-film">1993</span>
-      </a>
-      <a class="year-cell" href="./2016/index.html" data-disabled="true">
-        <span class="year">2016</span>
-        <span class="featured-film">1984</span>
-      </a>
-      <a class="year-cell" href="./2017/index.html" data-disabled="true">
-        <span class="year">2017</span>
-        <span class="featured-film">1987</span>
-      </a>
-      <a class="year-cell" href="./2018/index.html" data-disabled="true">
-        <span class="year">2018</span>
-        <span class="featured-film">1989</span>
-      </a>
-      <a class="year-cell" href="./2019/index.html" data-disabled="true">
-        <span class="year">2019</span>
-        <span class="featured-film">1986</span>
-      </a>
-      <a class="year-cell" href="./2020/index.html" data-disabled="true">
-        <span class="year">2020</span>
-        <span class="featured-film">1990</span>
-      </a>
-      <a class="year-cell" href="./2021/index.html" data-disabled="true">
-        <span class="year">2021</span>
-        <span class="featured-film">1988</span>
-      </a>
-      <a class="year-cell" href="./2022/index.html" data-disabled="false">
-        <span class="year">2022</span>
-        <span class="featured-film">1996</span>
-      </a>
-      <a class="year-cell" href="./2023/index.html" data-disabled="false">
-        <span class="year">2023</span>
-        <span class="featured-film">1983</span>
-      </a>
-      <a class="year-cell" href="./2024/index.html" data-disabled="false">
-        <span class="year">2024</span>
-        <span class="featured-film">1994</span>
-      </a>
-      <a class="year-cell" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" data-disabled="true">
-        <span class="year">2025</span>
-        <span class="featured-film">2038</span>
-      </a>
-    </div>
-  </div>
+<body class="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+    <!-- Header -->
+    <header class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="film-strip absolute inset-0 opacity-20"></div>
+        <div class="container mx-auto px-4 py-16 md:py-24 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="glitch text-5xl md:text-7xl lg:text-8xl font-bold mb-4 title-font" data-text="F THIS MOVIE FEST!">
+                    F THIS MOVIE FEST!
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 font-light tracking-wider" id="years-tagline">
+                    Over a Decade of Cinematic Celebration
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#years" class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-full font-bold transition-all transform hover:scale-105">
+                        Explore Archive
+                    </a>
+                    <a href="#about" class="bg-transparent border-2 border-white hover:bg-white hover:text-black px-6 py-3 rounded-full font-bold transition-all transform hover:scale-105">
+                        About the Fest
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Countdown to next fest -->
+    <section class="bg-gradient-to-r from-red-900 to-red-600 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl mb-4 title-font">COUNTDOWN TO F THIS MOVIE FEST! <span id="next-fest-year">2026</span></h2>
+            <div class="flex justify-center space-x-2 md:space-x-6 countdown">
+                <div class="bg-black bg-opacity-40 px-4 py-2 rounded-lg">
+                    <div class="text-3xl md:text-5xl" id="days">00</div>
+                    <div class="text-sm">DAYS</div>
+                </div>
+                <div class="bg-black bg-opacity-40 px-4 py-2 rounded-lg">
+                    <div class="text-3xl md:text-5xl" id="hours">00</div>
+                    <div class="text-sm">HOURS</div>
+                </div>
+                <div class="bg-black bg-opacity-40 px-4 py-2 rounded-lg">
+                    <div class="text-3xl md:text-5xl" id="minutes">00</div>
+                    <div class="text-sm">MINUTES</div>
+                </div>
+                <div class="bg-black bg-opacity-40 px-4 py-2 rounded-lg">
+                    <div class="text-3xl md:text-5xl" id="seconds">00</div>
+                    <div class="text-sm">SECONDS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Years Grid -->
+    <section id="years" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center title-font">THE ARCHIVE</h2>
+
+            <div id="loading" class="text-center py-16 text-slate-200/75">
+                <div class="inline-flex flex-col items-center gap-3">
+                    <span class="animate-spin w-8 h-8 rounded-full border-4 border-red-500 border-t-transparent"></span>
+                    <p>Loading the archive…</p>
+                </div>
+            </div>
+
+            <div id="years-grid" class="grid gap-8 hidden" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); max-width: 100%;">
+                <!-- Year cards will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Participation Chart -->
+    <section id="participation-chart-section" class="py-16 bg-gray-800 hidden">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-4xl font-bold mb-4 title-font">POSTS OVER TIME</h2>
+                    <p class="text-xl text-red-400 font-semibold mb-2" id="years-tagline"></p>
+                    <p class="text-gray-300 max-w-2xl mx-auto">
+                        This chart shows the total number of posts made during the fest for each year.  🚀
+                    </p>
+                </div>
+                <div class="chart-shell">
+                    <div class="chart-wrapper">
+                        <canvas id="participation-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-8 text-center title-font">ABOUT THE FEST</h2>
+                <div class="bg-gray-900 bg-opacity-50 p-8 rounded-xl border-l-4 border-red-600">
+                    <p class="mb-6 text-lg">
+                        <span class="text-red-400 font-bold">F This Movie Fest!</span> was created way back in 2012 to mark the <a href="https://fthismovie.podbean.com/e/f-this-movie-the-100th-episode-spectacular/" class="text-red-400 hover:text-red-300">100th F This Movie! podcast</a>.
+                    </p>
+                    <p class="mb-6 text-lg">
+                        What started as the world's first online film festival has grown into an annual tradition.
+                    </p>
+                    <p class="mb-6 text-lg">
+                        This visualization project archives the social media posts surrounding each year's festival, preserving the treasure that is <span class="text-red-400 font-bold">F This Movie Fest!</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold title-font mb-2">F THIS MOVIE FEST!</h3>
+                    <p class="text-gray-400">Celebrating cinema since 2012</p>
+                    <p class="text-gray-400 text-sm mt-2">
+                        Hacked together with ❤️ by <a href="https://bsky.app/profile/mediumfidelity.bsky.social" class="text-red-400 hover:text-red-300">@MediumFidelity</a>
+                        as a thanks to the <a href="https://bsky.app/profile/fthismovie.bsky.social" class="text-red-400 hover:text-red-300">@FThisMovie</a> crew.
+                    </p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://twitter.com/FThisMovie" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                    <a href="https://bsky.app/profile/fthismovie.bsky.social" class="text-gray-400 hover:text-white text-xl">🦋</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-xs">
+                <p>F This Movie Fest! Archive</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let overviewData = null;
+
+        // Load overview.json (contains fests + stats), then generate year cards
+        async function loadFests() {
+            try {
+                const overviewResponse = await fetch('data/overview.json');
+
+                if (!overviewResponse.ok) throw new Error('Could not load overview.json');
+                overviewData = await overviewResponse.json();
+
+                document.getElementById('loading').classList.add('hidden');
+                document.getElementById('years-grid').classList.remove('hidden');
+
+                generateYearCards();
+                renderParticipationChart();
+                updateNextFestCountdown();
+            } catch (err) {
+                document.getElementById('loading').innerHTML =
+                    '<p class="text-red-400">Error loading festival data: ' + err.message + '</p>';
+            }
+        }
+
+        function generateYearCards() {
+            const yearsGrid = document.getElementById('years-grid');
+            if (!overviewData || !overviewData.years) return;
+
+            overviewData.years.forEach(yearData => {
+                const year = yearData.year;
+                const moviesYear = yearData.movies_year || '?';
+                const hasData = yearData.stats && yearData.stats.posts > 0;
+
+                // Check if fest is in the future using first movie's start time if available
+                let isFuture = false;
+                if (yearData.movies && yearData.movies.length > 0 && yearData.movies[0].start_time) {
+                    isFuture = new Date(yearData.movies[0].start_time) > new Date();
+                } else if (yearData.fest_date) {
+                    isFuture = new Date(yearData.fest_date) > new Date();
+                }
+
+                const yearCard = document.createElement('div');
+                yearCard.className = 'year-card bg-gray-800 rounded-xl overflow-hidden shadow-lg relative cursor-pointer h-full';
+
+                // Build poster HTML if available
+                let posterHtml = '';
+                if (yearData.fest_poster) {
+                    const posterPath = `images/ftmf-poster-${year}.jpg`;
+                    posterHtml = `
+                        <div class="w-full md:w-40 md:flex-shrink-0 md:min-h-[240px] overflow-hidden bg-gray-900 flex items-center justify-center">
+                            <img src="${posterPath}" alt="Fest ${year} Poster"
+                                 class="w-full md:w-full object-contain">
+                        </div>
+                    `;
+                }
+
+                // Status badge for future/coming soon fests
+                let statusBadge = '';
+                if (isFuture || !hasData) {
+                    statusBadge = `
+                        <span class="data-status coming-soon">
+                            <i class="fas fa-star mr-1"></i>
+                            COMING SOON
+                        </span>
+                    `;
+                }
+
+                yearCard.innerHTML = `
+                    ${statusBadge}
+                    <div class="flex flex-col md:flex-row h-full">
+                        ${posterHtml}
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-2 mb-3">
+                                <h3 class="text-4xl font-bold title-font text-white">${year}</h3>
+                                <div class="text-sm text-gray-400 whitespace-nowrap">
+                                    <i class="fas fa-calendar mr-1 text-red-400"></i>
+                                    ${formatDate(yearData.fest_date)}
+                                </div>
+                            </div>
+                            <div class="text-gray-300 mb-2">
+                                <i class="fas fa-film mr-2 text-red-400"></i>
+                                Films from ${moviesYear}
+                            </div>
+                            ${yearData.fest_url ? `
+                                <a href="${yearData.fest_url}" target="_blank" rel="noopener"
+                                   class="inline-flex items-center gap-2 text-sm text-red-400 hover:text-red-300 transition relative z-20 mt-auto pt-4"
+                                   onclick="event.stopPropagation()">
+                                    <i class="fas fa-external-link-alt"></i> View Announcement
+                                </a>
+                            ` : ''}
+                        </div>
+                    </div>
+                    <a href="${year}/index.html" class="absolute inset-0 z-10"></a>
+                `;
+
+                yearsGrid.appendChild(yearCard);
+            });
+        }
+
+        function checkIfDataExists(year) {
+            // Check if we have stats data for this year in overview.json
+            if (!overviewData || !overviewData.years) return false;
+            const yearData = overviewData.years.find(y => y.year === parseInt(year));
+            return yearData && yearData.stats && yearData.stats.posts > 0;
+        }
+
+        function findNextFutureFest() {
+            // Find the earliest future fest in overview data
+            if (!overviewData || !overviewData.years) return null;
+
+            const now = new Date();
+            const futureFests = overviewData.years
+                .filter(y => {
+                    // Check first movie's start time if available, otherwise use fest_date
+                    let festDateTime;
+                    if (y.movies && y.movies.length > 0 && y.movies[0].start_time) {
+                        festDateTime = new Date(y.movies[0].start_time);
+                    } else if (y.fest_date) {
+                        festDateTime = new Date(y.fest_date);
+                    } else {
+                        return false;
+                    }
+                    return festDateTime > now;
+                })
+                .sort((a, b) => {
+                    // Sort by first movie start time if available, otherwise fest_date
+                    const timeA = (a.movies && a.movies.length > 0 && a.movies[0].start_time)
+                        ? new Date(a.movies[0].start_time)
+                        : new Date(a.fest_date);
+                    const timeB = (b.movies && b.movies.length > 0 && b.movies[0].start_time)
+                        ? new Date(b.movies[0].start_time)
+                        : new Date(b.fest_date);
+                    return timeA - timeB;
+                });
+
+            return futureFests.length > 0 ? futureFests[0] : null;
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return 'TBD';
+            const date = new Date(dateStr + 'T00:00:00Z');
+            // Format without year to avoid redundancy with fest year
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+        }
+
+        function renderParticipationChart() {
+            if (!overviewData || !overviewData.years || overviewData.years.length === 0) {
+                return; // No data to display
+            }
+
+            // Show the chart section
+            document.getElementById('participation-chart-section').classList.remove('hidden');
+
+            // Prepare data
+            const chartData = overviewData.years
+                .filter(y => y.stats && y.stats.posts > 0)
+                .sort((a, b) => a.year - b.year);
+
+            if (chartData.length === 0) return;
+
+            // Calculate years span
+            const firstYear = chartData[0].year;
+            const lastYear = chartData[chartData.length - 1].year;
+            const yearsCount = lastYear - firstYear + 1;
+            const tagline = `${yearsCount} Years of Cinematic Celebration`;
+            document.getElementById('years-tagline').textContent = tagline;
+
+            const years = chartData.map(y => y.year.toString());
+            const posts = chartData.map(y => y.stats.posts || 0);
+
+            const ctx = document.getElementById('participation-chart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: years,
+                    datasets: [{
+                        label: 'Posts',
+                        data: posts,
+                        backgroundColor: 'rgba(255, 62, 62, 0.6)',
+                        borderColor: '#ff3e3e',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { color: 'rgba(255,255,255,.45)' },
+                            grid: { color: 'rgba(148,163,184,.08)' }
+                        },
+                        x: {
+                            ticks: { color: 'rgba(255,255,255,.45)' },
+                            grid: { color: 'rgba(148,163,184,.1)' }
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
+
+        function updateNextFestCountdown() {
+            // Find the next future fest from overview data
+            const nextFest = findNextFutureFest();
+
+            if (!nextFest || !nextFest.fest_date) {
+                // Hide countdown section if there's no future fest
+                const countdownSection = document.querySelector('.bg-gradient-to-r.from-red-900');
+                if (countdownSection) {
+                    countdownSection.style.display = 'none';
+                }
+                return;
+            }
+
+            document.getElementById('next-fest-year').textContent = nextFest.year;
+
+            // Use first movie's start time if available, otherwise fall back to fest date
+            let nextFestDate;
+            if (nextFest.movies && nextFest.movies.length > 0 && nextFest.movies[0].start_time) {
+                // Parse ISO 8601 timestamp from first movie
+                nextFestDate = new Date(nextFest.movies[0].start_time);
+            } else {
+                // Fall back to fest date (midnight)
+                const [year, month, day] = nextFest.fest_date.split('-');
+                nextFestDate = new Date(parseInt(year), parseInt(month) - 1, parseInt(day));
+            }
+
+            // Update countdown every second
+            setInterval(() => {
+                const now = new Date();
+                const diff = nextFestDate - now;
+
+                if (diff > 0) {
+                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                    document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                } else {
+                    // Countdown reached zero - IT'S FEST TIME!
+                    const countdownContainer = document.querySelector('.countdown');
+                    if (countdownContainer && !countdownContainer.classList.contains('fest-live')) {
+                        countdownContainer.classList.add('fest-live');
+                        countdownContainer.innerHTML = `
+                            <div class="text-center animate-pulse">
+                                <div class="text-5xl md:text-7xl font-bold mb-4 title-font" style="text-shadow: 0 0 20px rgba(255,255,255,0.8);">
+                                    🎬 IT'S FEST TIME! 🎬
+                                </div>
+                                <a href="${nextFest.year}/index.html"
+                                   class="inline-block bg-white text-red-600 px-8 py-4 rounded-full font-bold text-xl hover:bg-red-100 transition-all transform hover:scale-105 shadow-lg">
+                                    GO TO FEST ${nextFest.year} →
+                                </a>
+                            </div>
+                        `;
+                    }
+                }
+            }, 1000);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', loadFests);
+    </script>
 </body>
 </html>
