@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-23T21:13:21.269Z",
+  "generated_at": "2026-02-18T02:46:20.701Z",
   "fest_meta": {
     "fest_year": 2014,
     "fest_date": "2014-02-15",
@@ -10,8 +10,8 @@
       "TBD: Average U.S. gas price in 1985",
       "TBD: Notable pop-culture event from 1985"
     ],
-    "fest_url": "http://www.fthismovie.net/2014/01/announcing-f-this-movie-fest-3.html",
-    "fest_poster": "images/ftmf-2014-poster.jpg",
+    "fest_url": "https://www.fthismovie.com/2014/01/announcing-f-this-movie-fest-3.html",
+    "fest_poster": "images/ftmf-poster-2014.jpg",
     "social": {
       "platform": "Twitter",
       "icon": "assets/social/twitter.svg"
@@ -5255,7 +5255,6 @@
       "title": "Pee-Wee's Big Adventure",
       "director": "Tim Burton",
       "poster": "images/pee_wees_big_adventure.jpg",
-      "post_image": null,
       "start_time": "2014-02-15T18:00:00+00:00",
       "runtime": 90,
       "window_start": "2014-02-15T17:50:00Z",
@@ -5397,7 +5396,6 @@
       "title": "Commando",
       "director": "Mark L. Lester",
       "poster": "images/commando.jpg",
-      "post_image": null,
       "start_time": "2014-02-15T20:00:00+00:00",
       "runtime": 90,
       "window_start": "2014-02-15T19:50:00Z",
@@ -5539,7 +5537,6 @@
       "title": "Explorers",
       "director": "Joe Dante",
       "poster": "images/explorers.jpg",
-      "post_image": null,
       "start_time": "2014-02-15T22:00:00+00:00",
       "runtime": 106,
       "window_start": "2014-02-15T21:50:00Z",
@@ -5681,7 +5678,6 @@
       "title": "The Goonies",
       "director": "Richard Donner",
       "poster": "images/goonies.jpg",
-      "post_image": null,
       "start_time": "2014-02-16T00:15:00+00:00",
       "runtime": 114,
       "window_start": "2014-02-16T00:05:00Z",
@@ -5823,7 +5819,6 @@
       "title": "Back to the Future",
       "director": "Robert Zemeckis",
       "poster": "images/back-to-the-future-1985.jpg",
-      "post_image": null,
       "start_time": "2014-02-16T02:30:00+00:00",
       "runtime": 116,
       "window_start": "2014-02-16T02:20:00Z",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-23T21:13:36.012Z",
+  "generated_at": "2026-02-18T02:46:34.091Z",
   "fest_meta": {
     "fest_year": 2021,
     "fest_date": "2021-03-06",
@@ -10,8 +10,8 @@
       "TBD: Average U.S. gas price in 1988",
       "TBD: Notable pop-culture event from 1988"
     ],
-    "fest_url": "http://www.fthismovie.net/2021/02/announcing-f-this-movie-fest-2021.html",
-    "fest_poster": "images/ftmf-2021-poster.jpg",
+    "fest_url": "https://www.fthismovie.com/2021/02/announcing-f-this-movie-fest-2021.html",
+    "fest_poster": "images/ftmf-poster-2021.jpg",
     "social": {
       "platform": "Twitter",
       "icon": "assets/social/twitter.svg"
@@ -6312,7 +6312,6 @@
       "title": "Beetlejuice",
       "director": "Tim Burton",
       "poster": "images/beetlejuice.jpg",
-      "post_image": null,
       "start_time": "2021-03-06T16:00:00+00:00",
       "runtime": 92,
       "window_start": "2021-03-06T15:50:00Z",
@@ -6454,7 +6453,6 @@
       "title": "Willow",
       "director": "Ron Howard",
       "poster": "images/willow_ver2.jpg",
-      "post_image": null,
       "start_time": "2021-03-06T18:00:00+00:00",
       "runtime": 126,
       "window_start": "2021-03-06T17:50:00Z",
@@ -6596,7 +6594,6 @@
       "title": "Who Framed Roger Rabbit",
       "director": "Robert Zemeckis",
       "poster": "images/who_framed_roger_rabbit.jpg",
-      "post_image": null,
       "start_time": "2021-03-06T20:30:00+00:00",
       "runtime": 104,
       "window_start": "2021-03-06T20:20:00Z",
@@ -6738,7 +6735,6 @@
       "title": "Action Jackson",
       "director": "Craig R. Baxley",
       "poster": "images/action_jackson.jpg",
-      "post_image": null,
       "start_time": "2021-03-06T22:45:00+00:00",
       "runtime": 96,
       "window_start": "2021-03-06T22:35:00Z",
@@ -6880,7 +6876,6 @@
       "title": "They Live",
       "director": "John Carpenter",
       "poster": "images/they_live.jpg",
-      "post_image": null,
       "start_time": "2021-03-07T00:45:00+00:00",
       "runtime": 94,
       "window_start": "2021-03-07T00:35:00Z",
@@ -7022,7 +7017,6 @@
       "title": "Die Hard",
       "director": "John McTiernan",
       "poster": "images/die_hard.jpg",
-      "post_image": null,
       "start_time": "2021-03-07T02:45:00+00:00",
       "runtime": 132,
       "window_start": "2021-03-07T02:35:00Z",

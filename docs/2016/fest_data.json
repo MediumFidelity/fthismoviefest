@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-23T21:13:26.323Z",
+  "generated_at": "2026-02-18T02:46:24.529Z",
   "fest_meta": {
     "fest_year": 2016,
     "fest_date": "2016-02-13",
@@ -10,8 +10,8 @@
       "TBD: Average U.S. gas price in 1984",
       "TBD: Notable pop-culture event from 1984"
     ],
-    "fest_url": "http://www.fthismovie.net/2016/01/announcing-f-this-movie-fest-5.html",
-    "fest_poster": "images/ftmf-2016-poster.jpg",
+    "fest_url": "https://www.fthismovie.com/2016/01/announcing-f-this-movie-fest-5.html",
+    "fest_poster": "images/ftmf-poster-2016.jpg",
     "social": {
       "platform": "Twitter",
       "icon": "assets/social/twitter.svg"
@@ -5192,7 +5192,6 @@
       "title": "The Last Starfighter",
       "director": "Nick Castle",
       "poster": "images/last_starfighter.jpg",
-      "post_image": null,
       "start_time": "2016-02-13T18:00:00+00:00",
       "runtime": 103,
       "window_start": "2016-02-13T17:50:00Z",
@@ -5334,7 +5333,6 @@
       "title": "Indiana Jones and the Temple of Doom",
       "director": "Steven Spielberg",
       "poster": "images/temple_of_doom.jpg",
-      "post_image": null,
       "start_time": "2016-02-13T20:15:00+00:00",
       "runtime": 118,
       "window_start": "2016-02-13T20:05:00Z",
@@ -5476,7 +5474,6 @@
       "title": "Night of the Comet",
       "director": "Thom Eberhardt",
       "poster": "images/night_of_the_comet.jpg",
-      "post_image": null,
       "start_time": "2016-02-13T22:35:00+00:00",
       "runtime": 95,
       "window_start": "2016-02-13T22:25:00Z",
@@ -5618,7 +5615,6 @@
       "title": "Streets of Fire",
       "director": "Walter Hill",
       "poster": "images/streets_of_fire.jpg",
-      "post_image": null,
       "start_time": "2016-02-14T00:30:00+00:00",
       "runtime": 93,
       "window_start": "2016-02-14T00:20:00Z",
@@ -5760,7 +5756,6 @@
       "title": "Ghostbusters",
       "director": "Ivan Reitman",
       "poster": "images/ghostbusters.jpg",
-      "post_image": null,
       "start_time": "2016-02-14T02:30:00+00:00",
       "runtime": 107,
       "window_start": "2016-02-14T02:20:00Z",

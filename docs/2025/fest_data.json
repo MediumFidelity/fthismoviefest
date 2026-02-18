@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-23T21:13:38Z",
+  "generated_at": "2026-02-18T02:46:36Z",
   "fest_meta": {
     "fest_year": 2025,
     "fest_date": "2025-03-01",
@@ -10,8 +10,8 @@
       "TBD: Average U.S. gas price in 1998",
       "TBD: Notable pop-culture event from 1998"
     ],
-    "fest_url": "http://www.fthismovie.net/2025/02/announcing-f-this-movie-fest-2025.html",
-    "fest_poster": "images/ftmf-2025-poster.jpg",
+    "fest_url": "https://www.fthismovie.com/2025/02/announcing-f-this-movie-fest-2025.html",
+    "fest_poster": "images/ftmf-poster-2025.jpg",
     "social": {
       "platform": "Bluesky",
       "icon": "assets/social/bluesky.svg"
@@ -6332,7 +6332,6 @@
       "title": "Small Soldiers",
       "director": "Joe Dante",
       "poster": "images/small_soldiers_ver2.jpg",
-      "post_image": null,
       "start_time": "2025-03-01T10:00:00-06:00",
       "runtime": 108,
       "window_start": "2025-03-01T15:50:00Z",
@@ -6473,7 +6472,6 @@
       "title": "The Faculty",
       "director": "Robert Rodriguez",
       "poster": "images/faculty.jpg",
-      "post_image": null,
       "start_time": "2025-03-01T12:15:00-06:00",
       "runtime": 104,
       "window_start": "2025-03-01T18:05:00Z",
@@ -6614,7 +6612,6 @@
       "title": "The Big Lebowski",
       "director": "Joel & Ethan Coen",
       "poster": "images/big_lebowski_ver1.jpg",
-      "post_image": null,
       "start_time": "2025-03-01T14:15:00-06:00",
       "runtime": 117,
       "window_start": "2025-03-01T20:05:00Z",
@@ -6755,7 +6752,6 @@
       "title": "Psycho (1998)",
       "director": "Gus Van Sant",
       "poster": "images/psycho.jpg",
-      "post_image": null,
       "start_time": "2025-03-01T16:30:00-06:00",
       "runtime": 104,
       "window_start": "2025-03-01T22:20:00Z",
@@ -6896,7 +6892,6 @@
       "title": "Snake Eyes",
       "director": "Brian De Palma",
       "poster": "images/snake_eyes.jpg",
-      "post_image": null,
       "start_time": "2025-03-01T18:30:00-06:00",
       "runtime": 98,
       "window_start": "2025-03-02T00:20:00Z",
@@ -7037,7 +7032,6 @@
       "title": "Armageddon",
       "director": "Michael Bay",
       "poster": "images/armageddon_ver3.jpg",
-      "post_image": null,
       "start_time": "2025-03-01T20:30:00-06:00",
       "runtime": 150,
       "window_start": "2025-03-02T02:20:00Z",

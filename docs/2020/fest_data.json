@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-23T21:13:34.054Z",
+  "generated_at": "2026-02-18T02:46:32.149Z",
   "fest_meta": {
     "fest_year": 2020,
     "fest_date": "2020-03-07",
@@ -10,8 +10,8 @@
       "TBD: Average U.S. gas price in 1990",
       "TBD: Notable pop-culture event from 1990"
     ],
-    "fest_url": "http://www.fthismovie.net/2020/02/announcing-f-this-movie-fest-2020.html",
-    "fest_poster": "images/ftmf-2020-poster.jpg",
+    "fest_url": "https://www.fthismovie.com/2020/02/announcing-f-this-movie-fest-2020.html",
+    "fest_poster": "images/ftmf-poster-2020.jpg",
     "social": {
       "platform": "Twitter",
       "icon": "assets/social/twitter.svg"
@@ -5864,7 +5864,6 @@
       "title": "Tremors",
       "director": "Ron Underwood",
       "poster": "images/tremors.jpg",
-      "post_image": null,
       "start_time": "2020-03-07T16:00:00+00:00",
       "runtime": 96,
       "window_start": "2020-03-07T15:50:00Z",
@@ -6006,7 +6005,6 @@
       "title": "Teenage Mutant Ninja Turtles",
       "director": "Steve Barron",
       "poster": "images/teenage_mutant_ninja_turtles.jpg",
-      "post_image": null,
       "start_time": "2020-03-07T18:00:00+00:00",
       "runtime": 93,
       "window_start": "2020-03-07T17:50:00Z",
@@ -6148,7 +6146,6 @@
       "title": "Dick Tracy",
       "director": "Warren Beatty",
       "poster": "images/dick_tracy_ver9.jpg",
-      "post_image": null,
       "start_time": "2020-03-07T20:00:00+00:00",
       "runtime": 105,
       "window_start": "2020-03-07T19:50:00Z",
@@ -6290,7 +6287,6 @@
       "title": "Hard to Kill",
       "director": "Bruce Malmuth",
       "poster": "images/hard_to_kill.jpg",
-      "post_image": null,
       "start_time": "2020-03-07T22:00:00+00:00",
       "runtime": 96,
       "window_start": "2020-03-07T21:50:00Z",
@@ -6432,7 +6428,6 @@
       "title": "Darkman",
       "director": "Sam Raimi",
       "poster": "images/darkman_ver4.jpg",
-      "post_image": null,
       "start_time": "2020-03-08T00:00:00+00:00",
       "runtime": 95,
       "window_start": "2020-03-07T23:50:00Z",
@@ -6574,7 +6569,6 @@
       "title": "Total Recall",
       "director": "Paul Verhoeven",
       "poster": "images/total_recall.jpg",
-      "post_image": null,
       "start_time": "2020-03-08T02:00:00+00:00",
       "runtime": 113,
       "window_start": "2020-03-08T01:50:00Z",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-23T21:13:23.172Z",
+  "generated_at": "2026-02-18T02:46:22.624Z",
   "fest_meta": {
     "fest_year": 2015,
     "fest_date": "2015-02-07",
@@ -10,8 +10,8 @@
       "TBD: Average U.S. gas price in 1993",
       "TBD: Notable pop-culture event from 1993"
     ],
-    "fest_url": "http://www.fthismovie.net/2015/01/announcing-f-this-movie-fest-4.html",
-    "fest_poster": "images/ftmf-2015-poster.jpg",
+    "fest_url": "https://www.fthismovie.com/2015/01/announcing-f-this-movie-fest-4.html",
+    "fest_poster": "images/ftmf-poster-2015.jpg",
     "social": {
       "platform": "Twitter",
       "icon": "assets/social/twitter.svg"
@@ -5332,7 +5332,6 @@
       "title": "Demolition Man",
       "director": "Marco Brambilla",
       "poster": "images/demolition_man.jpg",
-      "post_image": null,
       "start_time": "2015-02-07T18:00:00+00:00",
       "runtime": 115,
       "window_start": "2015-02-07T17:50:00Z",
@@ -5474,7 +5473,6 @@
       "title": "Army of Darkness",
       "director": "Sam Raimi",
       "poster": "images/army_of_darkness.jpg",
-      "post_image": null,
       "start_time": "2015-02-07T20:15:00+00:00",
       "runtime": 81,
       "window_start": "2015-02-07T20:05:00Z",
@@ -5616,7 +5614,6 @@
       "title": "Hard Target",
       "director": "John Woo",
       "poster": "images/hard_target.jpg",
-      "post_image": null,
       "start_time": "2015-02-07T22:00:00+00:00",
       "runtime": 97,
       "window_start": "2015-02-07T21:50:00Z",
@@ -5758,7 +5755,6 @@
       "title": "True Romance",
       "director": "Tony Scott",
       "poster": "images/true_romance_ver1.jpg",
-      "post_image": null,
       "start_time": "2015-02-08T00:00:00+00:00",
       "runtime": 118,
       "window_start": "2015-02-07T23:50:00Z",
@@ -5900,7 +5896,6 @@
       "title": "Jurassic Park",
       "director": "Steven Spielberg",
       "poster": "images/jurassic_park_ver2.jpg",
-      "post_image": null,
       "start_time": "2015-02-08T02:30:00+00:00",
       "runtime": 127,
       "window_start": "2015-02-08T02:20:00Z",

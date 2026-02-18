@@ -94,7 +94,7 @@
     .stat-card{background:rgba(15,23,42,.4);border:1px solid rgba(148,163,184,.15);border-radius:1rem;padding:.9rem .95rem .9rem;display:flex;flex-direction:column;gap:.25rem}
     .stat-card .stat-title{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(241,245,249,.45)}
     .stat-card .stat-value{font-size:2.25rem;font-weight:700;line-height:1}
-    .coming-soon{background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.3);border-radius:1rem;padding:2rem;text-align:center}
+    .coming-soon{background:rgba(251,191,36,.1);border:1px solid rgba(251,191,36,.3);border-radius:1rem;padding:2rem;margin-bottom:2rem;text-align:center}
     .coming-soon h3{color:#fbbf24;font-size:1.5rem;margin-bottom:1rem}
     .coming-soon p{color:rgba(255,255,255,.6)}
     @media (min-width:1024px){.movie-grid{grid-template-columns:260px minmax(0,1fr)}.movie-top-posts{grid-column:1/-1}}
@@ -145,7 +145,7 @@
     <div id="coming-soon" class="hidden">
       <div class="coming-soon">
         <h3><i class="fas fa-clock mr-2"></i>Data Coming Soon</h3>
-        <p>Data for 2012 hasn't been processed yet. Check back soon!</p>
+        <p>Data for 2012 hasn't been processed yet. Check back after the fest!</p>
       </div>
     </div>
 
@@ -290,6 +290,10 @@
         document.getElementById('loading').classList.add('hidden');
         document.getElementById('content').classList.remove('hidden');
 
+        if (festData?.is_placeholder === true) {
+          showComingSoon();
+        }
+        
         const meta = festData.fest_meta || {};
         const yearLabel = document.getElementById('year-label');
         yearLabel.textContent = meta.fest_year
@@ -331,6 +335,8 @@
           message.textContent = messageText;
           notice.classList.remove('hidden');
         }
+
+        
 
         renderDashboard();
       } catch (err) {

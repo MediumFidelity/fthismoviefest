@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-23T21:13:36.481Z",
+  "generated_at": "2026-02-18T02:46:34.559Z",
   "fest_meta": {
     "fest_year": 2022,
     "fest_date": "2022-03-05",
@@ -10,8 +10,8 @@
       "TBD: Average U.S. gas price in 1996",
       "TBD: Notable pop-culture event from 1996"
     ],
-    "fest_url": "http://www.fthismovie.net/2022/02/announcing-f-this-movie-fest-2022.html",
-    "fest_poster": "images/ftmf-2022-poster.jpg",
+    "fest_url": "https://www.fthismovie.com/2022/02/announcing-f-this-movie-fest-2022.html",
+    "fest_poster": "images/ftmf-poster-2022.jpg",
     "social": {
       "platform": "Twitter",
       "icon": "assets/social/twitter.svg"
@@ -6507,7 +6507,6 @@
       "title": "Mars Attacks!",
       "director": "Tim Burton",
       "poster": "images/mars_attacks_ver3.jpeg",
-      "post_image": null,
       "start_time": "2022-03-05T16:00:00+00:00",
       "runtime": 106,
       "window_start": "2022-03-05T15:50:00Z",
@@ -6649,7 +6648,6 @@
       "title": "The Rock",
       "director": "Michael Bay",
       "poster": "images/the_rock.jpeg",
-      "post_image": null,
       "start_time": "2022-03-05T18:15:00+00:00",
       "runtime": 136,
       "window_start": "2022-03-05T18:05:00Z",
@@ -6791,7 +6789,6 @@
       "title": "That Thing You Do!",
       "director": "Tom Hanks",
       "poster": "images/that_thing_you_do.jpeg",
-      "post_image": null,
       "start_time": "2022-03-05T20:45:00+00:00",
       "runtime": 108,
       "window_start": "2022-03-05T20:35:00Z",
@@ -6933,7 +6930,6 @@
       "title": "The Phantom",
       "director": "Simon Wincer",
       "poster": "images/phantom_ver2.jpeg",
-      "post_image": null,
       "start_time": "2022-03-05T22:45:00+00:00",
       "runtime": 100,
       "window_start": "2022-03-05T22:35:00Z",
@@ -7075,7 +7071,6 @@
       "title": "From Dusk Till Dawn",
       "director": "Robert Rodriguez",
       "poster": "images/from_dusk_till_dawn_ver1.jpeg",
-      "post_image": null,
       "start_time": "2022-03-06T01:00:00+00:00",
       "runtime": 108,
       "window_start": "2022-03-06T00:50:00Z",
@@ -7217,7 +7212,6 @@
       "title": "Independence Day",
       "director": "Roland Emmerich",
       "poster": "images/independence_day_ver2.jpeg",
-      "post_image": null,
       "start_time": "2022-03-06T03:00:00+00:00",
       "runtime": 145,
       "window_start": "2022-03-06T02:50:00Z",

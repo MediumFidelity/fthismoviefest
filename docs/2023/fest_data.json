@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-23T21:13:37.588Z",
+  "generated_at": "2026-02-18T02:46:35.748Z",
   "fest_meta": {
     "fest_year": 2023,
     "fest_date": "2023-03-04",
@@ -10,8 +10,8 @@
       "TBD: Average U.S. gas price in 1983",
       "TBD: Notable pop-culture event from 1983"
     ],
-    "fest_url": "http://www.fthismovie.net/2023/02/announcing-f-this-movie-fest-2023.html",
-    "fest_poster": "images/ftmf-2023-poster.jpg",
+    "fest_url": "https://www.fthismovie.com/2023/02/announcing-f-this-movie-fest-2023.html",
+    "fest_poster": "images/ftmf-poster-2023.jpg",
     "social": {
       "platform": "Twitter",
       "icon": "assets/social/twitter.svg"
@@ -6409,7 +6409,6 @@
       "title": "WarGames",
       "director": "John Badham",
       "poster": "images/wargames_ver1.jpg",
-      "post_image": null,
       "start_time": "2023-03-04T16:00:00+00:00",
       "runtime": 114,
       "window_start": "2023-03-04T15:50:00Z",
@@ -6551,7 +6550,6 @@
       "title": "Superman III",
       "director": "Richard Lester",
       "poster": "images/superman_iii.jpg",
-      "post_image": null,
       "start_time": "2023-03-04T18:30:00+00:00",
       "runtime": 125,
       "window_start": "2023-03-04T18:20:00Z",
@@ -6693,7 +6691,6 @@
       "title": "Mr. Mom",
       "director": "Stan Dragoti",
       "poster": "images/mr_mom.jpg",
-      "post_image": null,
       "start_time": "2023-03-04T21:00:00+00:00",
       "runtime": 91,
       "window_start": "2023-03-04T20:50:00Z",
@@ -6835,7 +6832,6 @@
       "title": "Krull",
       "director": "Peter Yates",
       "poster": "images/krull_ver2.jpg",
-      "post_image": null,
       "start_time": "2023-03-04T22:45:00+00:00",
       "runtime": 121,
       "window_start": "2023-03-04T22:35:00Z",
@@ -6977,7 +6973,6 @@
       "title": "Valley Girl",
       "director": "Martha Coolidge",
       "poster": "images/valley_girl.jpg",
-      "post_image": null,
       "start_time": "2023-03-05T01:15:00+00:00",
       "runtime": 99,
       "window_start": "2023-03-05T01:05:00Z",
@@ -7119,7 +7114,6 @@
       "title": "Star Wars: Episode VI - Return of the Jedi",
       "director": "Richard Marquand",
       "poster": "images/return_of_the_jedi_ver1.jpg",
-      "post_image": null,
       "start_time": "2023-03-05T03:00:00+00:00",
       "runtime": 131,
       "window_start": "2023-03-05T02:50:00Z",

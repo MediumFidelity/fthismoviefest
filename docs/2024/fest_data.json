@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-23T21:13:38.509Z",
+  "generated_at": "2026-02-18T02:46:36.784Z",
   "fest_meta": {
     "fest_year": 2024,
     "fest_date": "2024-02-24",
@@ -10,8 +10,8 @@
       "TBD: Average U.S. gas price in 1994",
       "TBD: Notable pop-culture event from 1994"
     ],
-    "fest_url": "http://www.fthismovie.net/2024/02/announcing-f-this-movie-fest-2024.html",
-    "fest_poster": "images/ftmf-2024-poster.jpg",
+    "fest_url": "https://www.fthismovie.com/2024/02/announcing-f-this-movie-fest-2024.html",
+    "fest_poster": "images/ftmf-poster-2024.jpg",
     "social": {
       "platform": "X",
       "icon": "assets/social/x.svg"
@@ -6094,7 +6094,6 @@
       "title": "The Mask",
       "director": "Chuck Russell",
       "poster": "images/mask.jpg",
-      "post_image": null,
       "start_time": "2024-02-24T16:00:00+00:00",
       "runtime": 101,
       "window_start": "2024-02-24T15:50:00Z",
@@ -6236,7 +6235,6 @@
       "title": "Stargate",
       "director": "Roland Emmerich",
       "poster": "images/stargate.jpg",
-      "post_image": null,
       "start_time": "2024-02-24T18:15:00+00:00",
       "runtime": 121,
       "window_start": "2024-02-24T18:05:00Z",
@@ -6378,7 +6376,6 @@
       "title": "Terminal Velocity",
       "director": "Deran Serafian",
       "poster": "images/terminal_velocity_ver1.jpg",
-      "post_image": null,
       "start_time": "2024-02-24T20:45:00+00:00",
       "runtime": 102,
       "window_start": "2024-02-24T20:35:00Z",
@@ -6520,7 +6517,6 @@
       "title": "Cabin Boy",
       "director": "Adam Resnick",
       "poster": "images/cabin_boy.jpg",
-      "post_image": null,
       "start_time": "2024-02-24T22:45:00+00:00",
       "runtime": 80,
       "window_start": "2024-02-24T22:35:00Z",
@@ -6662,7 +6658,6 @@
       "title": "Timecop",
       "director": "Peter Hyams",
       "poster": "images/timecop.jpg",
-      "post_image": null,
       "start_time": "2024-02-25T00:30:00+00:00",
       "runtime": 98,
       "window_start": "2024-02-25T00:20:00Z",
@@ -6804,7 +6799,6 @@
       "title": "Speed",
       "director": "Jan de Bont",
       "poster": "images/speed_xlg.jpg",
-      "post_image": null,
       "start_time": "2024-02-25T02:30:00+00:00",
       "runtime": 116,
       "window_start": "2024-02-25T02:20:00Z",

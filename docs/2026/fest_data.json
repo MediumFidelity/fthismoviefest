@@ -1,0 +1,142 @@
+{
+  "generated_at": "2026-02-18T02:02:40Z",
+  "is_placeholder": true,
+  "fest_meta": {
+    "fest_year": 2026,
+    "fest_date": "2026-03-07",
+    "movies_year": 2000,
+    "fun_facts": [],
+    "fest_url": "https://www.fthismovie.com/2026/02/announcing-f-this-movie-fest-2026.html",
+    "fest_poster": "images/ftmf-poster-2026.jpg",
+    "social": {
+      "platform": "Bluesky",
+      "icon": "assets/social/bluesky.svg"
+    }
+  },
+  "timeline": [],
+  "movies": [
+    {
+      "title": "Charlie's Angels",
+      "director": "McG",
+      "poster": "images/charlies_angels.jpg",
+      "start_time": "2026-03-07 10:00:00-06:00",
+      "runtime": 98,
+      "window_start": "2026-03-07 15:50:00+00:00",
+      "window_end": "2026-03-07 17:48:00+00:00",
+      "stats": {
+        "posts": 0,
+        "replies": 0,
+        "likes": 0,
+        "reposts": 0,
+        "unique_authors": 0,
+        "likers": 0,
+        "participants": 0
+      },
+      "top_posts": []
+    },
+    {
+      "title": "Pitch Black",
+      "director": "David Twohy",
+      "poster": "images/pitch_black.jpg",
+      "start_time": "2026-03-07 12:00:00-06:00",
+      "runtime": 108,
+      "window_start": "2026-03-07 17:50:00+00:00",
+      "window_end": "2026-03-07 19:58:00+00:00",
+      "stats": {
+        "posts": 0,
+        "replies": 0,
+        "likes": 0,
+        "reposts": 0,
+        "unique_authors": 0,
+        "likers": 0,
+        "participants": 0
+      },
+      "top_posts": []
+    },
+    {
+      "title": "Bring It On",
+      "director": "Peyton Reed",
+      "poster": "images/bring_it_on.jpg",
+      "start_time": "2026-03-07 14:15:00-06:00",
+      "runtime": 99,
+      "window_start": "2026-03-07 20:05:00+00:00",
+      "window_end": "2026-03-07 22:04:00+00:00",
+      "stats": {
+        "posts": 0,
+        "replies": 0,
+        "likes": 0,
+        "reposts": 0,
+        "unique_authors": 0,
+        "likers": 0,
+        "participants": 0
+      },
+      "top_posts": []
+    },
+    {
+      "title": "Gone in 60 Seconds",
+      "director": "Dominic Sena",
+      "poster": "images/gone_in_60_seconds.jpg",
+      "start_time": "2026-03-07 16:15:00-06:00",
+      "runtime": 118,
+      "window_start": "2026-03-07 22:05:00+00:00",
+      "window_end": "2026-03-08 00:23:00+00:00",
+      "stats": {
+        "posts": 0,
+        "replies": 0,
+        "likes": 0,
+        "reposts": 0,
+        "unique_authors": 0,
+        "likers": 0,
+        "participants": 0
+      },
+      "top_posts": []
+    },
+    {
+      "title": "The Replacements",
+      "director": "Howard Deutch",
+      "poster": "images/the_replacements.jpg",
+      "start_time": "2026-03-07 18:30:00-06:00",
+      "runtime": 118,
+      "window_start": "2026-03-08 00:20:00+00:00",
+      "window_end": "2026-03-08 02:38:00+00:00",
+      "stats": {
+        "posts": 0,
+        "replies": 0,
+        "likes": 0,
+        "reposts": 0,
+        "unique_authors": 0,
+        "likers": 0,
+        "participants": 0
+      },
+      "top_posts": []
+    },
+    {
+      "title": "Gladiator",
+      "director": "Ridley Scott",
+      "poster": "images/gladiator.jpg",
+      "start_time": "2026-03-07 20:45:00-06:00",
+      "runtime": 155,
+      "window_start": "2026-03-08 02:35:00+00:00",
+      "window_end": "2026-03-08 05:30:00+00:00",
+      "stats": {
+        "posts": 0,
+        "replies": 0,
+        "likes": 0,
+        "reposts": 0,
+        "unique_authors": 0,
+        "likers": 0,
+        "participants": 0
+      },
+      "top_posts": []
+    }
+  ],
+  "participants": [],
+  "stats": {
+    "total_posts": 0,
+    "total_replies": 0,
+    "total_likes": 0,
+    "total_reposts": 0,
+    "unique_authors": 0,
+    "total_participants": 0
+  }
+}

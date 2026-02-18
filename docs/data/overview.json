@@ -1,12 +1,78 @@
 {
-  "generated_at": "2025-11-24T03:02:03.582417Z",
+  "generated_at": "2026-02-18T02:46:59.210110Z",
   "years": [
+    {
+      "year": 2026,
+      "fest_date": "2026-03-07",
+      "movies_year": 2000,
+      "fest_url": "https://www.fthismovie.com/2026/02/announcing-f-this-movie-fest-2026.html",
+      "fest_poster": "2026/images/ftmf-poster-2026.jpg",
+      "social": {
+        "platform": "Bluesky",
+        "icon": "assets/social/bluesky.svg"
+      },
+      "movies": [
+        {
+          "title": "Charlie's Angels",
+          "director": "McG",
+          "start_time": "2026-03-07T10:00:00-06:00",
+          "runtime": 98,
+          "poster": "images/charlies_angels.jpg"
+        },
+        {
+          "title": "Pitch Black",
+          "director": "David Twohy",
+          "start_time": "2026-03-07T12:00:00-06:00",
+          "runtime": 108,
+          "poster": "images/pitch_black.jpg"
+        },
+        {
+          "title": "Bring It On",
+          "director": "Peyton Reed",
+          "start_time": "2026-03-07T14:15:00-06:00",
+          "runtime": 99,
+          "poster": "images/bring_it_on.jpg"
+        },
+        {
+          "title": "Gone in 60 Seconds",
+          "director": "Dominic Sena",
+          "start_time": "2026-03-07T16:15:00-06:00",
+          "runtime": 118,
+          "poster": "images/gone_in_60_seconds.jpg"
+        },
+        {
+          "title": "The Replacements",
+          "director": "Howard Deutch",
+          "start_time": "2026-03-07T18:30:00-06:00",
+          "runtime": 118,
+          "poster": "images/the_replacements.jpg"
+        },
+        {
+          "title": "Gladiator",
+          "director": "Ridley Scott",
+          "start_time": "2026-03-07T20:45:00-06:00",
+          "runtime": 155,
+          "poster": "images/gladiator.jpg"
+        }
+      ],
+      "movies_count": 6,
+      "stats": {
+        "posts": 0,
+        "replies": 0,
+        "quotes": 0,
+        "likes": 0,
+        "reposts": 0,
+        "participants": 0,
+        "unique_authors": 0,
+        "likers": 0
+      }
+    },
     {
       "year": 2025,
       "fest_date": "2025-03-01",
       "movies_year": 1998,
-      "fest_url": "http://www.fthismovie.net/2025/02/announcing-f-this-movie-fest-2025.html",
-      "fest_poster": "2025/images/ftmf-2025-poster.jpg",
+      "fest_url": "https://www.fthismovie.com/2025/02/announcing-f-this-movie-fest-2025.html",
+      "fest_poster": "2025/images/ftmf-poster-2025.jpg",
       "social": {
         "platform": "Bluesky",
         "icon": "assets/social/bluesky.svg"
@@ -71,8 +137,8 @@
       "year": 2024,
       "fest_date": "2024-02-24",
       "movies_year": 1994,
-      "fest_url": "http://www.fthismovie.net/2024/02/announcing-f-this-movie-fest-2024.html",
-      "fest_poster": "2024/images/ftmf-2024-poster.jpg",
+      "fest_url": "https://www.fthismovie.com/2024/02/announcing-f-this-movie-fest-2024.html",
+      "fest_poster": "2024/images/ftmf-poster-2024.jpg",
       "social": {
         "platform": "X",
         "icon": "assets/social/x.svg"
@@ -137,8 +203,8 @@
       "year": 2023,
       "fest_date": "2023-03-04",
       "movies_year": 1983,
-      "fest_url": "http://www.fthismovie.net/2023/02/announcing-f-this-movie-fest-2023.html",
-      "fest_poster": "2023/images/ftmf-2023-poster.jpg",
+      "fest_url": "https://www.fthismovie.com/2023/02/announcing-f-this-movie-fest-2023.html",
+      "fest_poster": "2023/images/ftmf-poster-2023.jpg",
       "social": {
         "platform": "twitter",
         "icon": "assets/social/twitter.svg"
@@ -203,8 +269,8 @@
       "year": 2022,
       "fest_date": "2022-03-05",
       "movies_year": 1996,
-      "fest_url": "http://www.fthismovie.net/2022/02/announcing-f-this-movie-fest-2022.html",
-      "fest_poster": "2022/images/ftmf-2022-poster.jpg",
+      "fest_url": "https://www.fthismovie.com/2022/02/announcing-f-this-movie-fest-2022.html",
+      "fest_poster": "2022/images/ftmf-poster-2022.jpg",
       "social": {
         "platform": "twitter",
         "icon": "assets/social/twitter.svg"
@@ -269,8 +335,8 @@
       "year": 2021,
       "fest_date": "2021-03-06",
       "movies_year": 1988,
-      "fest_url": "http://www.fthismovie.net/2021/02/announcing-f-this-movie-fest-2021.html",
-      "fest_poster": "2021/images/ftmf-2021-poster.jpg",
+      "fest_url": "https://www.fthismovie.com/2021/02/announcing-f-this-movie-fest-2021.html",
+      "fest_poster": "2021/images/ftmf-poster-2021.jpg",
       "social": {
         "platform": "twitter",
         "icon": "assets/social/twitter.svg"
@@ -335,8 +401,8 @@
       "year": 2020,
       "fest_date": "2020-03-07",
       "movies_year": 1990,
-      "fest_url": "http://www.fthismovie.net/2020/02/announcing-f-this-movie-fest-2020.html",
-      "fest_poster": "2020/images/ftmf-2020-poster.jpg",
+      "fest_url": "https://www.fthismovie.com/2020/02/announcing-f-this-movie-fest-2020.html",
+      "fest_poster": "2020/images/ftmf-poster-2020.jpg",
       "social": {
         "platform": "twitter",
         "icon": "assets/social/twitter.svg"
@@ -401,8 +467,8 @@
       "year": 2019,
       "fest_date": "2019-03-09",
       "movies_year": 1986,
-      "fest_url": "http://www.fthismovie.net/2019/02/announcing-f-this-movie-fest-2019.html",
-      "fest_poster": "2019/images/ftmf-2019-poster.jpg",
+      "fest_url": "https://www.fthismovie.com/2019/02/announcing-f-this-movie-fest-2019.html",
+      "fest_poster": "2019/images/ftmf-poster-2019.jpg",
       "social": {
         "platform": "twitter",
         "icon": "assets/social/twitter.svg"
@@ -467,8 +533,8 @@
       "year": 2018,
       "fest_date": "2018-03-03",
       "movies_year": 1989,
-      "fest_url": "http://www.fthismovie.net/2018/01/announcing-f-this-movie-fest-7.html",
-      "fest_poster": "2018/images/ftmf-2018-poster.jpg",
+      "fest_url": "https://www.fthismovie.com/2018/01/announcing-f-this-movie-fest-7.html",
+      "fest_poster": "2018/images/ftmf-poster-2018.jpg",
       "social": {
         "platform": "twitter",
         "icon": "assets/social/twitter.svg"
@@ -526,8 +592,8 @@
       "year": 2017,
       "fest_date": "2017-02-11",
       "movies_year": 1987,
-      "fest_url": "http://www.fthismovie.net/2017/01/announcing-f-this-movie-fest-6.html",
-      "fest_poster": "2017/images/ftmf-2017-poster.jpg",
+      "fest_url": "https://www.fthismovie.com/2017/01/announcing-f-this-movie-fest-6.html",
+      "fest_poster": "2017/images/ftmf-poster-2017.jpg",
       "social": {
         "platform": "twitter",
         "icon": "assets/social/twitter.svg"
@@ -585,8 +651,8 @@
       "year": 2016,
       "fest_date": "2016-02-13",
       "movies_year": 1984,
-      "fest_url": "http://www.fthismovie.net/2016/01/announcing-f-this-movie-fest-5.html",
-      "fest_poster": "2016/images/ftmf-2016-poster.jpg",
+      "fest_url": "https://www.fthismovie.com/2016/01/announcing-f-this-movie-fest-5.html",
+      "fest_poster": "2016/images/ftmf-poster-2016.jpg",
       "social": {
         "platform": "twitter",
         "icon": "assets/social/twitter.svg"
@@ -644,8 +710,8 @@
       "year": 2015,
       "fest_date": "2015-02-07",
       "movies_year": 1993,
-      "fest_url": "http://www.fthismovie.net/2015/01/announcing-f-this-movie-fest-4.html",
-      "fest_poster": "2015/images/ftmf-2015-poster.jpg",
+      "fest_url": "https://www.fthismovie.com/2015/01/announcing-f-this-movie-fest-4.html",
+      "fest_poster": "2015/images/ftmf-poster-2015.jpg",
       "social": {
         "platform": "twitter",
         "icon": "assets/social/twitter.svg"
@@ -703,8 +769,8 @@
       "year": 2014,
       "fest_date": "2014-02-15",
       "movies_year": 1985,
-      "fest_url": "http://www.fthismovie.net/2014/01/announcing-f-this-movie-fest-3.html",
-      "fest_poster": "2014/images/ftmf-2014-poster.jpg",
+      "fest_url": "https://www.fthismovie.com/2014/01/announcing-f-this-movie-fest-3.html",
+      "fest_poster": "2014/images/ftmf-poster-2014.jpg",
       "social": {
         "platform": "twitter",
         "icon": "assets/social/twitter.svg"
@@ -762,8 +828,8 @@
       "year": 2013,
       "fest_date": "2013-02-02",
       "movies_year": 1991,
-      "fest_url": "http://www.fthismovie.net/2013/02/its-f-this-movie-fest-2.html",
-      "fest_poster": "2013/images/ftmf-2013-poster.jpg",
+      "fest_url": "https://www.fthismovie.com/2013/02/its-f-this-movie-fest-2.html",
+      "fest_poster": "2013/images/ftmf-poster-2013.jpg",
       "social": {
         "platform": "twitter",
         "icon": "assets/social/twitter.svg"
@@ -821,8 +887,8 @@
       "year": 2012,
       "fest_date": "2012-02-04",
       "movies_year": 1982,
-      "fest_url": "http://www.fthismovie.net/2012/01/heres-f-this-movie-fest-lineup.html",
-      "fest_poster": "2012/images/ftmf-2012-poster.jpg",
+      "fest_url": "https://www.fthismovie.com/2012/01/heres-f-this-movie-fest-lineup.html",
+      "fest_poster": "2012/images/ftmf-poster-2012.jpg",
       "social": {
         "platform": "twitter",
         "icon": "assets/social/twitter.svg"

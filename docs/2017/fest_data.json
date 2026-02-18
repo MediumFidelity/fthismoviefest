@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-23T21:13:28.365Z",
+  "generated_at": "2026-02-18T02:46:26.413Z",
   "fest_meta": {
     "fest_year": 2017,
     "fest_date": "2017-02-11",
@@ -10,8 +10,8 @@
       "TBD: Average U.S. gas price in 1987",
       "TBD: Notable pop-culture event from 1987"
     ],
-    "fest_url": "http://www.fthismovie.net/2017/01/announcing-f-this-movie-fest-6.html",
-    "fest_poster": "images/ftmf-2017-poster.jpg",
+    "fest_url": "https://www.fthismovie.com/2017/01/announcing-f-this-movie-fest-6.html",
+    "fest_poster": "images/ftmf-poster-2017.jpg",
     "social": {
       "platform": "Twitter",
       "icon": "assets/social/twitter.svg"
@@ -5017,7 +5017,6 @@
       "title": "The Princess Bride",
       "director": "Rob Reiner",
       "poster": "images/princess_bride.jpg",
-      "post_image": null,
       "start_time": "2017-02-11T18:00:00+00:00",
       "runtime": 98,
       "window_start": "2017-02-11T17:50:00Z",
@@ -5159,7 +5158,6 @@
       "title": "Predator",
       "director": "John McTiernan",
       "poster": "images/predator.jpg",
-      "post_image": null,
       "start_time": "2017-02-11T20:00:00+00:00",
       "runtime": 107,
       "window_start": "2017-02-11T19:50:00Z",
@@ -5301,7 +5299,6 @@
       "title": "Raising Arizona",
       "director": "Joel & Ethan Coen",
       "poster": "images/raising_arizona.jpg",
-      "post_image": null,
       "start_time": "2017-02-11T22:15:00+00:00",
       "runtime": 94,
       "window_start": "2017-02-11T22:05:00Z",
@@ -5443,7 +5440,6 @@
       "title": "RoboCop",
       "director": "Paul Verhoeven",
       "poster": "images/robocop.jpg",
-      "post_image": null,
       "start_time": "2017-02-12T00:15:00+00:00",
       "runtime": 101,
       "window_start": "2017-02-12T00:05:00Z",
@@ -5585,7 +5581,6 @@
       "title": "The Monster Squad",
       "director": "Fred Dekker",
       "poster": "images/monster-squad-poster.jpg",
-      "post_image": null,
       "start_time": "2017-02-12T02:30:00+00:00",
       "runtime": 82,
       "window_start": "2017-02-12T02:20:00Z",

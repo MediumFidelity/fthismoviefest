@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-23T21:13:30.246Z",
+  "generated_at": "2026-02-18T02:46:28.289Z",
   "fest_meta": {
     "fest_year": 2018,
     "fest_date": "2018-03-03",
@@ -10,8 +10,8 @@
       "TBD: Average U.S. gas price in 1989",
       "TBD: Notable pop-culture event from 1989"
     ],
-    "fest_url": "http://www.fthismovie.net/2018/01/announcing-f-this-movie-fest-7.html",
-    "fest_poster": "images/ftmf-2018-poster.jpg",
+    "fest_url": "https://www.fthismovie.com/2018/01/announcing-f-this-movie-fest-7.html",
+    "fest_poster": "images/ftmf-poster-2018.jpg",
     "social": {
       "platform": "Twitter",
       "icon": "assets/social/twitter.svg"
@@ -5430,7 +5430,6 @@
       "title": "UHF",
       "director": "Jay Levey",
       "poster": "images/uhf_ver1.jpg",
-      "post_image": null,
       "start_time": "2018-03-03T18:00:00+00:00",
       "runtime": 97,
       "window_start": "2018-03-03T17:50:00Z",
@@ -5572,7 +5571,6 @@
       "title": "Tango & Cash",
       "director": "Andrei Konchalovsky",
       "poster": "images/tango_and_cash.jpg",
-      "post_image": null,
       "start_time": "2018-03-03T20:00:00+00:00",
       "runtime": 104,
       "window_start": "2018-03-03T19:50:00Z",
@@ -5714,7 +5712,6 @@
       "title": "The 'Burbs",
       "director": "Joe Dante",
       "poster": "images/burbs.jpg",
-      "post_image": null,
       "start_time": "2018-03-03T22:15:00+00:00",
       "runtime": 101,
       "window_start": "2018-03-03T22:05:00Z",
@@ -5856,7 +5853,6 @@
       "title": "Road House",
       "director": "Rowdy Herrington",
       "poster": "images/road_house.jpg",
-      "post_image": null,
       "start_time": "2018-03-04T00:15:00+00:00",
       "runtime": 114,
       "window_start": "2018-03-04T00:05:00Z",
@@ -5998,7 +5994,6 @@
       "title": "Batman",
       "director": "Tim Burton",
       "poster": "images/batman_ver2.jpg",
-      "post_image": null,
       "start_time": "2018-03-04T02:45:00+00:00",
       "runtime": 126,
       "window_start": "2018-03-04T02:35:00Z",
