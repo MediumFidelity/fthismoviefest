@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-18T02:46:59.210110Z",
+  "generated_at": "2026-04-02T18:40:29.471733Z",
   "years": [
     {
       "year": 2026,
@@ -57,14 +57,14 @@
       ],
       "movies_count": 6,
       "stats": {
-        "posts": 0,
-        "replies": 0,
+        "posts": 5583,
+        "replies": 1419,
         "quotes": 0,
-        "likes": 0,
-        "reposts": 0,
-        "participants": 0,
-        "unique_authors": 0,
-        "likers": 0
+        "likes": 24214,
+        "reposts": 387,
+        "participants": 862,
+        "unique_authors": 221,
+        "likers": 818
       }
     },
     {
